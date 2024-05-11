@@ -1,6 +1,6 @@
 ﻿namespace BurakT_ATM
 {
-    partial class Balance
+    partial class ChangePin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,12 @@
             panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
-            label5 = new Label();
             label2 = new Label();
+            label5 = new Label();
+            button1 = new Button();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
             label13 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(532, 76);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 2;
             // 
             // label6
             // 
@@ -71,80 +72,86 @@
             label1.Size = new Size(327, 31);
             label1.TabIndex = 1;
             label1.Text = "ATM MANAGEMENT SYSTEM";
-            label1.Click += label1_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(56, 110);
-            label5.Name = "label5";
-            label5.Size = new Size(201, 31);
-            label5.TabIndex = 11;
-            label5.Text = "Account Number:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(56, 179);
+            label2.Location = new Point(31, 189);
             label2.Name = "label2";
-            label2.Size = new Size(163, 31);
-            label2.TabIndex = 12;
-            label2.Text = "Your Balance:";
+            label2.Size = new Size(211, 31);
+            label2.TabIndex = 14;
+            label2.Text = "Confirm Password";
+            label2.Click += label2_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(31, 127);
+            label5.Name = "label5";
+            label5.Size = new Size(170, 31);
+            label5.TabIndex = 13;
+            label5.Text = "New Password";
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.HotTrack;
+            button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(360, 241);
+            button1.Name = "button1";
+            button1.Size = new Size(149, 43);
+            button1.TabIndex = 34;
+            button1.Text = "Change";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            textBox5.Location = new Point(273, 186);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(236, 38);
+            textBox5.TabIndex = 36;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            textBox6.Location = new Point(273, 124);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(236, 38);
+            textBox6.TabIndex = 35;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(223, 287);
+            label13.Location = new Point(388, 287);
             label13.Name = "label13";
             label13.Size = new Size(91, 31);
-            label13.TabIndex = 36;
+            label13.TabIndex = 37;
             label13.Text = "Logout";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(288, 179);
-            label3.Name = "label3";
-            label3.Size = new Size(158, 31);
-            label3.TabIndex = 38;
-            label3.Text = "Balance In Rs";
-            label3.Click += label3_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(288, 110);
-            label4.Name = "label4";
-            label4.Size = new Size(104, 31);
-            label4.TabIndex = 37;
-            label4.Text = "AccNum";
-            // 
-            // Balance
+            // ChangePin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 327);
             ControlBox = false;
-            Controls.Add(label3);
-            Controls.Add(label4);
             Controls.Add(label13);
+            Controls.Add(textBox5);
+            Controls.Add(textBox6);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label5);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Balance";
+            Name = "ChangePin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Balance";
+            Text = "ChangePin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -156,10 +163,11 @@
         private Panel panel1;
         private Label label6;
         private Label label1;
-        private Label label5;
         private Label label2;
+        private Label label5;
+        private Button button1;
+        private TextBox textBox5;
+        private TextBox textBox6;
         private Label label13;
-        private Label label3;
-        private Label label4;
     }
 }
