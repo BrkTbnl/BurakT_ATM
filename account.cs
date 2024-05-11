@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace BurakT_ATM
@@ -17,23 +11,75 @@ namespace BurakT_ATM
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            if (IsInputValid())
+            {
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30"))
+                    {
+                        con.Open();
+                        string query = "SELECT * FROM AccountTbl WHERE AccountNumber = @AccountNumber AND Pin = @Pin";
+                        using (SqlCommand cmd = new SqlCommand(query, con))
+                        {
+                            cmd.Parameters.AddWithValue("@AccountNumber", AccNumTb.Text);
+                            cmd.Parameters.AddWithValue("@Pin", pintb.Text);
 
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    // If the account and pin match, display a success message
+                                    MessageBox.Show("Login Successful");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid Account Number or Pin");
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Missing Information");
+            }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private bool IsInputValid()
         {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+            return !string.IsNullOrEmpty(AccNametb.Text) && !string.IsNullOrEmpty(AccNumTb.Text) && !string.IsNullOrEmpty(FanameTb.Text) && !string.IsNullOrEmpty(PhoneTb.Text) && !string.IsNullOrEmpty(Addresstb.Text) && !string.IsNullOrEmpty(occupationtb.Text) && !string.IsNullOrEmpty(pintb.Text);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+
         {
+
+            // Add your panel1_Paint logic here
+
+        }
+
+
+        private void label4_Click(object sender, EventArgs e)
+
+        {
+
+            // Add your label4_Click logic here
+
+        }
+
+
+        private void label9_Click(object sender, EventArgs e)
+
+        {
+
+            // Add your label9_Click logic here
 
         }
     }

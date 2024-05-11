@@ -91,7 +91,7 @@
             button6.BackColor = SystemColors.HotTrack;
             button6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(419, 300);
+            button6.Location = new Point(419, 283);
             button6.Name = "button6";
             button6.Size = new Size(169, 43);
             button6.TabIndex = 41;
@@ -103,7 +103,7 @@
             button5.BackColor = SystemColors.HotTrack;
             button5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(53, 300);
+            button5.Location = new Point(53, 283);
             button5.Name = "button5";
             button5.Size = new Size(176, 43);
             button5.TabIndex = 40;
@@ -116,7 +116,7 @@
             button4.BackColor = SystemColors.HotTrack;
             button4.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(419, 229);
+            button4.Location = new Point(419, 216);
             button4.Name = "button4";
             button4.Size = new Size(169, 43);
             button4.TabIndex = 39;
@@ -128,7 +128,7 @@
             button3.BackColor = SystemColors.HotTrack;
             button3.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(53, 229);
+            button3.Location = new Point(53, 216);
             button3.Name = "button3";
             button3.Size = new Size(176, 43);
             button3.TabIndex = 38;
@@ -215,6 +215,7 @@
             Name = "FASTCASH";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FASTCASH";
+            Load += FASTCASH_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

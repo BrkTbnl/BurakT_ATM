@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
             label2 = new Label();
+            label1 = new Label();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -52,17 +52,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 78);
             panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(243, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(343, 31);
-            label1.TabIndex = 2;
-            label1.Text = "Select Your Transaction Please";
+            panel1.Paint += panel1_Paint;
             // 
             // label2
             // 
@@ -76,6 +66,17 @@
             label2.Text = "X";
             label2.Click += label2_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(243, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(343, 31);
+            label1.TabIndex = 2;
+            label1.Text = "Select Your Transaction Please";
+            // 
             // button1
             // 
             button1.BackColor = SystemColors.HotTrack;
@@ -87,6 +88,7 @@
             button1.TabIndex = 8;
             button1.Text = "Deposit";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += this.button1_Click;
             // 
             // button2
             // 
@@ -99,6 +101,7 @@
             button2.TabIndex = 9;
             button2.Text = "Withdraw";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += this.button2_Click;
             // 
             // button3
             // 
@@ -111,6 +114,7 @@
             button3.TabIndex = 10;
             button3.Text = "Fast Cash";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += this.button3_Click;
             // 
             // button4
             // 
@@ -123,6 +127,7 @@
             button4.TabIndex = 11;
             button4.Text = "Mini Statement";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += this.button4_Click;
             // 
             // button5
             // 
@@ -135,6 +140,7 @@
             button5.TabIndex = 12;
             button5.Text = "Change Password";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += this.button5_Click;
             // 
             // button6
             // 
@@ -147,6 +153,7 @@
             button6.TabIndex = 13;
             button6.Text = "Balance";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // panel2
             // 
