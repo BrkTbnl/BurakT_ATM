@@ -78,6 +78,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(978, 78);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
             // 
             // label2
             // 
@@ -190,7 +191,7 @@
             label11.Name = "label11";
             label11.Size = new Size(98, 31);
             label11.TabIndex = 18;
-            label11.Text = "Balanca";
+            label11.Text = "Balance";
             // 
             // label12
             // 
