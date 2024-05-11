@@ -90,7 +90,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(31, 127);
+            label5.Location = new Point(31, 131);
             label5.Name = "label5";
             label5.Size = new Size(170, 31);
             label5.TabIndex = 13;
@@ -101,7 +101,7 @@
             button1.BackColor = SystemColors.HotTrack;
             button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(360, 241);
+            button1.Location = new Point(206, 241);
             button1.Name = "button1";
             button1.Size = new Size(149, 43);
             button1.TabIndex = 34;
@@ -119,7 +119,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox6.Location = new Point(273, 124);
+            textBox6.Location = new Point(273, 128);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(236, 38);
             textBox6.TabIndex = 35;
@@ -129,7 +129,7 @@
             label13.AutoSize = true;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(388, 287);
+            label13.Location = new Point(233, 287);
             label13.Name = "label13";
             label13.Size = new Size(91, 31);
             label13.TabIndex = 37;

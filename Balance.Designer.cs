@@ -100,7 +100,7 @@
             label13.AutoSize = true;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(223, 287);
+            label13.Location = new Point(233, 287);
             label13.Name = "label13";
             label13.Size = new Size(91, 31);
             label13.TabIndex = 36;

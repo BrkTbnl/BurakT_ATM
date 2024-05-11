@@ -1,6 +1,6 @@
 ﻿namespace BurakT_ATM
 {
-    partial class Deposit
+    partial class withdraw
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,12 @@
             panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
+            label2 = new Label();
             label13 = new Label();
             textBox6 = new TextBox();
             button1 = new Button();
             label5 = new Label();
-            label2 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -72,6 +73,17 @@
             label1.TabIndex = 1;
             label1.Text = "ATM MANAGEMENT SYSTEM";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(216, 79);
+            label2.Name = "label2";
+            label2.Size = new Size(108, 25);
+            label2.TabIndex = 47;
+            label2.Text = "WITHDRAW";
+            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -80,16 +92,16 @@
             label13.Location = new Point(233, 287);
             label13.Name = "label13";
             label13.Size = new Size(91, 31);
-            label13.TabIndex = 41;
+            label13.TabIndex = 46;
             label13.Text = "Logout";
             // 
             // textBox6
             // 
             textBox6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox6.Location = new Point(206, 158);
+            textBox6.Location = new Point(266, 188);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(236, 38);
-            textBox6.TabIndex = 40;
+            textBox6.TabIndex = 45;
             // 
             // button1
             // 
@@ -99,8 +111,8 @@
             button1.Location = new Point(206, 241);
             button1.Name = "button1";
             button1.Size = new Size(149, 43);
-            button1.TabIndex = 39;
-            button1.Text = "Deposit";
+            button1.TabIndex = 44;
+            button1.Text = "Withdraw";
             button1.UseVisualStyleBackColor = false;
             // 
             // label5
@@ -108,29 +120,30 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(86, 158);
+            label5.Location = new Point(21, 195);
             label5.Name = "label5";
-            label5.Size = new Size(106, 31);
-            label5.TabIndex = 38;
-            label5.Text = "Amount:";
+            label5.Size = new Size(239, 31);
+            label5.TabIndex = 43;
+            label5.Text = "Amount To Withdraw";
             // 
-            // label2
+            // label3
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(221, 97);
-            label2.Name = "label2";
-            label2.Size = new Size(86, 25);
-            label2.TabIndex = 42;
-            label2.Text = "DEPOSIT";
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(216, 119);
+            label3.Name = "label3";
+            label3.Size = new Size(80, 25);
+            label3.TabIndex = 48;
+            label3.Text = "Balance";
             // 
-            // Deposit
+            // withdraw
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 327);
             ControlBox = false;
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label13);
             Controls.Add(textBox6);
@@ -138,9 +151,9 @@
             Controls.Add(label5);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Deposit";
+            Name = "withdraw";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Deposit";
+            Text = "withdraw";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -152,10 +165,11 @@
         private Panel panel1;
         private Label label6;
         private Label label1;
+        private Label label2;
         private Label label13;
         private TextBox textBox6;
         private Button button1;
         private Label label5;
-        private Label label2;
+        private Label label3;
     }
 }
