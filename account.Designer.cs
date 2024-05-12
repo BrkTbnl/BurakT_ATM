@@ -61,7 +61,7 @@ namespace BurakT_ATM
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(204, 21);
+            label1.Location = new Point(198, 22);
             label1.Name = "label1";
             label1.Size = new Size(287, 31);
             label1.TabIndex = 2;
@@ -84,11 +84,12 @@ namespace BurakT_ATM
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(660, 9);
+            label2.Location = new Point(611, 0);
             label2.Name = "label2";
             label2.Size = new Size(29, 31);
             label2.TabIndex = 3;
             label2.Text = "X";
+            label2.Click += label2_Click;
             // 
             // label5
             // 
@@ -269,7 +270,7 @@ namespace BurakT_ATM
             button1.Name = "button1";
             button1.Size = new Size(149, 43);
             button1.TabIndex = 33;
-            button1.Text = "Login";
+            button1.Text = "Submit";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -292,6 +293,7 @@ namespace BurakT_ATM
             label13.Size = new Size(84, 25);
             label13.TabIndex = 35;
             label13.Text = "Logout";
+            label13.Click += label13_Click;
             // 
             // occupationtb
             // 

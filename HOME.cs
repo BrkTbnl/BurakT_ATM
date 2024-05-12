@@ -24,7 +24,9 @@ namespace BurakT_ATM
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            HOME hOME = new HOME();
+            hOME.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)

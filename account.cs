@@ -11,51 +11,46 @@ namespace BurakT_ATM
             InitializeComponent();
         }
 
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (IsInputValid())
+            int bal = 0;
+            if (AccNametb.Text == "" || AccNumTb.Text == "" || FanameTb.Text == "" || PhoneTb.Text == "" || Addresstb.Text == "" || occupationtb.Text == "" || pintb.Text == "")
             {
-                try
-                {
-                    using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30"))
-                    {
-                        con.Open();
-                        string query = "SELECT * FROM AccountTbl WHERE AccountNumber = @AccountNumber AND Pin = @Pin";
-                        using (SqlCommand cmd = new SqlCommand(query, con))
-                        {
-                            cmd.Parameters.AddWithValue("@AccountNumber", AccNumTb.Text);
-                            cmd.Parameters.AddWithValue("@Pin", pintb.Text);
+                MessageBox.Show("Missing Information");
 
-                            using (SqlDataReader reader = cmd.ExecuteReader())
-                            {
-                                if (reader.Read())
-                                {
-                                    // If the account and pin match, display a success message
-                                    MessageBox.Show("Login Successful");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Invalid Account Number or Pin");
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
             }
             else
             {
-                MessageBox.Show("Missing Information");
+                try
+                {
+                    Con.Open();
+                    String query = "insert into AccountTbl values('" + AccNumTb.Text + "','" + AccNametb.Text + "','" + FanameTb.Text + "','" + dobdate.Value.Date + "','" + PhoneTb.Text + "','" + Addresstb.Text + "','" + educationcb.SelectedItem.ToString() + "','" + occupationtb.Text + "'," + pintb.Text + "," + bal + ")";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Account Created Succesfully");
+                    Con.Close();
+                    Login log = new Login();
+                    log.Show();
+                    this.Hide();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
             }
+
+
+
+
+
+
+
         }
 
-        private bool IsInputValid()
-        {
-            return !string.IsNullOrEmpty(AccNametb.Text) && !string.IsNullOrEmpty(AccNumTb.Text) && !string.IsNullOrEmpty(FanameTb.Text) && !string.IsNullOrEmpty(PhoneTb.Text) && !string.IsNullOrEmpty(Addresstb.Text) && !string.IsNullOrEmpty(occupationtb.Text) && !string.IsNullOrEmpty(pintb.Text);
-        }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
 
@@ -81,6 +76,18 @@ namespace BurakT_ATM
 
             // Add your label9_Click logic here
 
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

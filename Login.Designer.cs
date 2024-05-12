@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panel1 = new Panel();
+            label6 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            AccNumTb = new TextBox();
+            PinTb = new TextBox();
             button1 = new Button();
             label2 = new Label();
             label5 = new Label();
-            label6 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -54,6 +54,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 76);
             panel1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(771, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(29, 31);
+            label6.TabIndex = 10;
+            label6.Text = "X";
             // 
             // label1
             // 
@@ -100,21 +111,21 @@
             label4.TabIndex = 4;
             label4.Text = "Password";
             // 
-            // textBox1
+            // AccNumTb
             // 
-            textBox1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox1.Location = new Point(464, 212);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(236, 38);
-            textBox1.TabIndex = 5;
+            AccNumTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            AccNumTb.Location = new Point(464, 212);
+            AccNumTb.Name = "AccNumTb";
+            AccNumTb.Size = new Size(236, 38);
+            AccNumTb.TabIndex = 5;
             // 
-            // textBox2
+            // PinTb
             // 
-            textBox2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox2.Location = new Point(464, 280);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(236, 38);
-            textBox2.TabIndex = 6;
+            PinTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            PinTb.Location = new Point(464, 280);
+            PinTb.Name = "PinTb";
+            PinTb.Size = new Size(236, 38);
+            PinTb.TabIndex = 6;
             // 
             // button1
             // 
@@ -127,6 +138,7 @@
             button1.TabIndex = 7;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
@@ -149,17 +161,7 @@
             label5.Size = new Size(99, 31);
             label5.TabIndex = 9;
             label5.Text = "SIGNUP";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(771, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(29, 31);
-            label6.TabIndex = 10;
-            label6.Text = "X";
+            label5.Click += label5_Click;
             // 
             // Login
             // 
@@ -170,8 +172,8 @@
             Controls.Add(label5);
             Controls.Add(label2);
             Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(PinTb);
+            Controls.Add(AccNumTb);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(pictureBox1);
@@ -194,8 +196,8 @@
         private PictureBox pictureBox1;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox AccNumTb;
+        private TextBox PinTb;
         private Button button1;
         private Label label2;
         private Label label5;
