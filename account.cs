@@ -13,6 +13,8 @@ namespace BurakT_ATM
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
 
+
+        //Account submit button
         private void button1_Click(object sender, EventArgs e)
         {
             int bal = 0;
@@ -23,23 +25,41 @@ namespace BurakT_ATM
             }
             else
             {
+
+
+                string query = "INSERT INTO AccountTbl (AccNum, Name, FaName, Dob, Phone, Address, Education, Occupation, Pin) " +
+               "VALUES (@AccNum, @AccName, @FName, @DOB, @Phone, @Address, @Education, @Occupation, @PIN)";
+
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.Parameters.AddWithValue("@AccNum", AccNumTb.Text);
+                cmd.Parameters.AddWithValue("@AccName", AccNametb.Text);
+                cmd.Parameters.AddWithValue("@FName", FanameTb.Text);
+                cmd.Parameters.AddWithValue("@DOB", dobdate.Value.Date);
+                cmd.Parameters.AddWithValue("@Phone", PhoneTb.Text);
+                cmd.Parameters.AddWithValue("@Address", Addresstb.Text);
+                cmd.Parameters.AddWithValue("@Education", educationcb.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Occupation", occupationtb.Text);
+                cmd.Parameters.AddWithValue("@PIN", pintb.Text);
+
                 try
                 {
                     Con.Open();
-                    String query = "insert into AccountTbl values('" + AccNumTb.Text + "','" + AccNametb.Text + "','" + FanameTb.Text + "','" + dobdate.Value.Date + "','" + PhoneTb.Text + "','" + Addresstb.Text + "','" + educationcb.SelectedItem.ToString() + "','" + occupationtb.Text + "'," + pintb.Text + "," + bal + ")";
-                    SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Account Created Succesfully");
+                    MessageBox.Show("Account Created Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
                     Con.Close();
-                    Login log = new Login();
+                    Login log = new Login();    
                     log.Show();
                     this.Hide();
+                }
 
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message);
-                }
+               
             }
 
 
@@ -78,6 +98,7 @@ namespace BurakT_ATM
 
         }
 
+        //Account Logout
         private void label13_Click(object sender, EventArgs e)
         {
             Login log = new Login();
@@ -85,6 +106,7 @@ namespace BurakT_ATM
             this.Hide();
         }
 
+        //Account exit
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();

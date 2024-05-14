@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,35 +33,50 @@ namespace BurakT_ATM
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
 
+
+        //Login page Login button
         private void button1_Click(object sender, EventArgs e)
         {
-            Con.Open();
-
-            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from AccountTbl where Accnum=@AccNum and PIN=@PIN", Con);
-            sda.SelectCommand.Parameters.AddWithValue("@AccNum", AccNumTb.Text.Trim());
-
-            // Convert the PIN input to an integer
-            int pin = 0;
-
-            if (int.TryParse(PinTb.Text.Trim(), out pin))
+            try
             {
-                sda.SelectCommand.Parameters.AddWithValue("@PIN", pin);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                Con.Open();
 
-                if (dt.Rows[0][0].ToString() == "1")
+                SqlDataAdapter sda = new SqlDataAdapter("select count(*) from AccountTbl where Accnum=@AccNum and PIN=@PIN", Con);
+                sda.SelectCommand.Parameters.AddWithValue("@AccNum", AccNumTb.Text.Trim());
+
+                // Check if PIN is numeric
+                if (int.TryParse(PinTb.Text.Trim(), out int pin))
                 {
-                    HOME home = new HOME();
-                    home.Show();
-                    this.Hide();
-                    Con.Close();
+                    sda.SelectCommand.Parameters.AddWithValue("@PIN", pin);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    // Check if there are any rows returned
+                    if (dt.Rows.Count > 0 && dt.Rows[0][0].ToString() == "1")
+                    {
+                        HOME home = new HOME();
+                        home.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Account Number or PIN Code");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Wrong Account Number or PIN Code");
+                    MessageBox.Show("PIN must be a numeric value");
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
                 Con.Close();
             }
+
         }
     }
 }
