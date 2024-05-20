@@ -91,5 +91,11 @@ namespace BurakT_ATM
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

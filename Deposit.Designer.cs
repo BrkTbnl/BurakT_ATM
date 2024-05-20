@@ -32,7 +32,7 @@
             label6 = new Label();
             label1 = new Label();
             label13 = new Label();
-            textBox6 = new TextBox();
+            DepoAmtTb = new TextBox();
             button1 = new Button();
             label5 = new Label();
             label2 = new Label();
@@ -80,18 +80,18 @@
             label13.ForeColor = Color.Black;
             label13.Location = new Point(233, 287);
             label13.Name = "label13";
-            label13.Size = new Size(91, 31);
+            label13.Size = new Size(66, 31);
             label13.TabIndex = 41;
-            label13.Text = "Logout";
+            label13.Text = "Back";
             label13.Click += label13_Click;
             // 
-            // textBox6
+            // DepoAmtTb
             // 
-            textBox6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox6.Location = new Point(206, 158);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(236, 38);
-            textBox6.TabIndex = 40;
+            DepoAmtTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            DepoAmtTb.Location = new Point(206, 158);
+            DepoAmtTb.Name = "DepoAmtTb";
+            DepoAmtTb.Size = new Size(236, 38);
+            DepoAmtTb.TabIndex = 40;
             // 
             // button1
             // 
@@ -136,7 +136,7 @@
             ControlBox = false;
             Controls.Add(label2);
             Controls.Add(label13);
-            Controls.Add(textBox6);
+            Controls.Add(DepoAmtTb);
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(panel1);
@@ -144,6 +144,7 @@
             Name = "Deposit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Deposit";
+            Load += Deposit_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -156,7 +157,7 @@
         private Label label6;
         private Label label1;
         private Label label13;
-        private TextBox textBox6;
+        private TextBox DepoAmtTb;
         private Button button1;
         private Label label5;
         private Label label2;

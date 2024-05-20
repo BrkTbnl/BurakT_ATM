@@ -24,8 +24,8 @@ namespace BurakT_ATM
 
         private void label5_Click(object sender, EventArgs e)
         {
-            HOME hOME = new HOME();
-            hOME.Show();
+            Login login = new Login();
+            login.Show();
             this.Hide();
         }
 
@@ -52,9 +52,12 @@ namespace BurakT_ATM
         {
 
         }
+        //Deposit button
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Deposit dp = new Deposit();
+            dp.Show();
+            this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

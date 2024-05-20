@@ -65,6 +65,7 @@
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label1
             // 
