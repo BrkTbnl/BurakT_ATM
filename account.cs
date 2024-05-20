@@ -21,14 +21,11 @@ namespace BurakT_ATM
             if (AccNametb.Text == "" || AccNumTb.Text == "" || FanameTb.Text == "" || PhoneTb.Text == "" || Addresstb.Text == "" || occupationtb.Text == "" || pintb.Text == "")
             {
                 MessageBox.Show("Missing Information");
-
             }
             else
             {
-
-
-                string query = "INSERT INTO AccountTbl (AccNum, Name, FaName, Dob, Phone, Address, Education, Occupation, Pin) " +
-               "VALUES (@AccNum, @AccName, @FName, @DOB, @Phone, @Address, @Education, @Occupation, @PIN)";
+                string query = "INSERT INTO AccountTbl (AccNum, Name, FaName, Dob, Phone, Address, Education, Occupation, Pin, Balance) " +
+               "VALUES (@AccNum, @AccName, @FName, @DOB, @Phone, @Address, @Education, @Occupation, @PIN, @Balance)";
 
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.Parameters.AddWithValue("@AccNum", AccNumTb.Text);
@@ -40,6 +37,7 @@ namespace BurakT_ATM
                 cmd.Parameters.AddWithValue("@Education", educationcb.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@Occupation", occupationtb.Text);
                 cmd.Parameters.AddWithValue("@PIN", pintb.Text);
+                cmd.Parameters.AddWithValue("@Balance", 0);
 
                 try
                 {
@@ -57,17 +55,8 @@ namespace BurakT_ATM
                     Login log = new Login();    
                     log.Show();
                     this.Hide();
-                }
-
-               
+                }  
             }
-
-
-
-
-
-
-
         }
 
 

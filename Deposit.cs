@@ -16,5 +16,22 @@ namespace BurakT_ATM
         {
             InitializeComponent();
         }
+
+        //Deposit
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

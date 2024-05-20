@@ -71,11 +71,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(172, 18);
+            label1.Location = new Point(190, 19);
             label1.Name = "label1";
-            label1.Size = new Size(327, 31);
+            label1.Size = new Size(293, 31);
             label1.TabIndex = 1;
-            label1.Text = "ATM MANAGEMENT SYSTEM";
+            label1.Text = "ATM X Bank ATM Systems";
             // 
             // panel2
             // 
@@ -109,7 +109,7 @@
             button5.TabIndex = 40;
             button5.Text = "50.00";
             button5.UseVisualStyleBackColor = false;
-            button5.Click += this.button5_Click;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -134,7 +134,7 @@
             button3.TabIndex = 38;
             button3.Text = "20.00";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += this.button3_Click;
+            button3.Click += button3_Click;
             // 
             // button2
             // 

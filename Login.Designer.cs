@@ -71,11 +71,12 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(238, 23);
+            label1.Location = new Point(297, 23);
             label1.Name = "label1";
-            label1.Size = new Size(327, 31);
+            label1.Size = new Size(239, 31);
             label1.TabIndex = 1;
-            label1.Text = "ATM MANAGEMENT SYSTEM";
+            label1.Text = "X Bank ATM Systems";
+            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 
@@ -182,6 +183,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

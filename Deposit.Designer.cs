@@ -60,17 +60,18 @@
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(99, 22);
+            label1.Location = new Point(152, 19);
             label1.Name = "label1";
-            label1.Size = new Size(327, 31);
+            label1.Size = new Size(239, 31);
             label1.TabIndex = 1;
-            label1.Text = "ATM MANAGEMENT SYSTEM";
+            label1.Text = "X Bank ATM Systems";
             // 
             // label13
             // 
@@ -82,6 +83,7 @@
             label13.Size = new Size(91, 31);
             label13.TabIndex = 41;
             label13.Text = "Logout";
+            label13.Click += label13_Click;
             // 
             // textBox6
             // 
@@ -102,6 +104,7 @@
             button1.TabIndex = 39;
             button1.Text = "Deposit";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label5
             // 

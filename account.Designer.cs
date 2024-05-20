@@ -61,11 +61,11 @@ namespace BurakT_ATM
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(198, 22);
+            label1.Location = new Point(219, 25);
             label1.Name = "label1";
-            label1.Size = new Size(287, 31);
+            label1.Size = new Size(239, 31);
             label1.TabIndex = 2;
-            label1.Text = "ATM Management System";
+            label1.Text = "X Bank ATM Systems";
             // 
             // panel1
             // 

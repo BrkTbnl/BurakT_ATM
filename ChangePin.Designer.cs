@@ -67,11 +67,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(99, 22);
+            label1.Location = new Point(155, 21);
             label1.Name = "label1";
-            label1.Size = new Size(327, 31);
+            label1.Size = new Size(239, 31);
             label1.TabIndex = 1;
-            label1.Text = "ATM MANAGEMENT SYSTEM";
+            label1.Text = "X Bank ATM Systems";
             // 
             // label2
             // 

@@ -19,7 +19,7 @@ namespace BurakT_ATM
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -29,9 +29,12 @@ namespace BurakT_ATM
             this.Hide();
         }
 
+        //Balance
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Balance balance = new Balance();
+            this.Hide();
+            balance.Show();
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -55,6 +58,21 @@ namespace BurakT_ATM
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        // Home page Acc number
+        public static String AccNumber;
+        private void HOME_Load(object sender, EventArgs e)
+            
+        {
+            AccNumlbl.Text = "Account Number: " + Login.AccNumber;
+            AccNumber = Login.AccNumber;
+
+        }
+
+        private void AccNumBl_Click(object sender, EventArgs e)
         {
 
         }

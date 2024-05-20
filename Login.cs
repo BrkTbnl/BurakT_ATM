@@ -34,6 +34,8 @@ namespace BurakT_ATM
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
 
 
+        public static string AccNumber;
+
         //Login page Login button
         private void button1_Click(object sender, EventArgs e)
         {
@@ -54,6 +56,7 @@ namespace BurakT_ATM
                     // Check if there are any rows returned
                     if (dt.Rows.Count > 0 && dt.Rows[0][0].ToString() == "1")
                     {
+                        AccNumber = AccNumTb.Text;
                         HOME home = new HOME();
                         home.Show();
                         this.Hide();
@@ -76,6 +79,16 @@ namespace BurakT_ATM
             {
                 Con.Close();
             }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

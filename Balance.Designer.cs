@@ -34,8 +34,8 @@
             label5 = new Label();
             label2 = new Label();
             label13 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            Balancelbl = new Label();
+            AccNumberlbl = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(532, 76);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
             // 
             // label6
             // 
@@ -60,17 +61,18 @@
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(99, 22);
+            label1.Location = new Point(153, 24);
             label1.Name = "label1";
-            label1.Size = new Size(327, 31);
+            label1.Size = new Size(239, 31);
             label1.TabIndex = 1;
-            label1.Text = "ATM MANAGEMENT SYSTEM";
+            label1.Text = "X Bank ATM Systems";
             label1.Click += label1_Click;
             // 
             // label5
@@ -83,6 +85,7 @@
             label5.Size = new Size(201, 31);
             label5.TabIndex = 11;
             label5.Text = "Account Number:";
+            label5.Click += label5_Click;
             // 
             // label2
             // 
@@ -102,32 +105,34 @@
             label13.ForeColor = Color.Black;
             label13.Location = new Point(233, 287);
             label13.Name = "label13";
-            label13.Size = new Size(91, 31);
+            label13.Size = new Size(66, 31);
             label13.TabIndex = 36;
-            label13.Text = "Logout";
+            label13.Text = "Back";
+            label13.Click += label13_Click;
             // 
-            // label3
+            // Balancelbl
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(288, 179);
-            label3.Name = "label3";
-            label3.Size = new Size(158, 31);
-            label3.TabIndex = 38;
-            label3.Text = "Balance In Rs";
-            label3.Click += label3_Click;
+            Balancelbl.AutoSize = true;
+            Balancelbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Balancelbl.ForeColor = Color.Black;
+            Balancelbl.Location = new Point(288, 179);
+            Balancelbl.Name = "Balancelbl";
+            Balancelbl.Size = new Size(158, 31);
+            Balancelbl.TabIndex = 38;
+            Balancelbl.Text = "Balance In Rs";
+            Balancelbl.Click += label3_Click;
             // 
-            // label4
+            // AccNumberlbl
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(288, 110);
-            label4.Name = "label4";
-            label4.Size = new Size(104, 31);
-            label4.TabIndex = 37;
-            label4.Text = "AccNum";
+            AccNumberlbl.AutoSize = true;
+            AccNumberlbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AccNumberlbl.ForeColor = Color.Black;
+            AccNumberlbl.Location = new Point(288, 110);
+            AccNumberlbl.Name = "AccNumberlbl";
+            AccNumberlbl.Size = new Size(104, 31);
+            AccNumberlbl.TabIndex = 37;
+            AccNumberlbl.Text = "AccNum";
+            AccNumberlbl.Click += label4_Click;
             // 
             // Balance
             // 
@@ -135,8 +140,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 327);
             ControlBox = false;
-            Controls.Add(label3);
-            Controls.Add(label4);
+            Controls.Add(Balancelbl);
+            Controls.Add(AccNumberlbl);
             Controls.Add(label13);
             Controls.Add(label2);
             Controls.Add(label5);
@@ -145,6 +150,7 @@
             Name = "Balance";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Balance";
+            Load += Balance_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -159,7 +165,7 @@
         private Label label5;
         private Label label2;
         private Label label13;
-        private Label label3;
-        private Label label4;
+        private Label Balancelbl;
+        private Label AccNumberlbl;
     }
 }

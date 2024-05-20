@@ -39,6 +39,7 @@
             button6 = new Button();
             panel2 = new Panel();
             label5 = new Label();
+            AccNumlbl = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             button1.TabIndex = 8;
             button1.Text = "Deposit";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += this.button1_Click;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -101,7 +102,7 @@
             button2.TabIndex = 9;
             button2.Text = "Withdraw";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += this.button2_Click;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -114,7 +115,7 @@
             button3.TabIndex = 10;
             button3.Text = "Fast Cash";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += this.button3_Click;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -127,7 +128,7 @@
             button4.TabIndex = 11;
             button4.Text = "Mini Statement";
             button4.UseVisualStyleBackColor = false;
-            button4.Click += this.button4_Click;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -140,7 +141,7 @@
             button5.TabIndex = 12;
             button5.Text = "Change Password";
             button5.UseVisualStyleBackColor = false;
-            button5.Click += this.button5_Click;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -176,6 +177,18 @@
             label5.Text = "Logout";
             label5.Click += label5_Click;
             // 
+            // AccNumlbl
+            // 
+            AccNumlbl.AutoSize = true;
+            AccNumlbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AccNumlbl.ForeColor = Color.Black;
+            AccNumlbl.Location = new Point(302, 96);
+            AccNumlbl.Name = "AccNumlbl";
+            AccNumlbl.Size = new Size(194, 31);
+            AccNumlbl.TabIndex = 16;
+            AccNumlbl.Text = "Account Number";
+            AccNumlbl.Click += AccNumBl_Click;
+            // 
             // HOME
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -183,6 +196,7 @@
             BackColor = Color.White;
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(AccNumlbl);
             Controls.Add(label5);
             Controls.Add(panel2);
             Controls.Add(button6);
@@ -196,6 +210,7 @@
             Name = "HOME";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HOME";
+            Load += HOME_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -215,5 +230,6 @@
         private Button button6;
         private Panel panel2;
         private Label label5;
+        private Label AccNumlbl;
     }
 }
