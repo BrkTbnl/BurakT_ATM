@@ -36,9 +36,12 @@ namespace BurakT_ATM
             this.Hide();
             balance.Show();
         }
+        //change password
         private void button5_Click(object sender, EventArgs e)
         {
-
+            ChangePin pin = new ChangePin();
+            pin.Show();
+            this.Hide();
         }
         private void button4_Click(object sender, EventArgs e)
         {

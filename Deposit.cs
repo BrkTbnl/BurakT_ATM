@@ -23,6 +23,7 @@ namespace BurakT_ATM
 
         int oldbalance, newbalance;
 
+        // deposit function
         private void button1_Click(object sender, EventArgs e)
         {
             int depositAmount;
@@ -42,15 +43,20 @@ namespace BurakT_ATM
                     cmd.Parameters.AddWithValue("@AccNum", Acc);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Deposit Successful!");
-                    Con.Close();
-                    HOME hOME = new HOME();
-                    hOME.Show();
-                    this.Hide();
+                   
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(Ex.Message);
+                    MessageBox.Show("An Error Occured:\n "+Ex.Message);
                 }
+                finally
+                {
+                    Con.Close();
+                }
+
+                HOME hOME = new HOME();
+                hOME.Show();
+                this.Hide();
             }
         }
 

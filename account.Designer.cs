@@ -208,6 +208,7 @@ namespace BurakT_ATM
             AccNumTb.Name = "AccNumTb";
             AccNumTb.Size = new Size(146, 31);
             AccNumTb.TabIndex = 20;
+            AccNumTb.TextChanged += AccNumTb_TextChanged;
             // 
             // Addresstb
             // 

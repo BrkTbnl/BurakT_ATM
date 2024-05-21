@@ -52,10 +52,10 @@ namespace BurakT_ATM
                 finally
                 {
                     Con.Close();
-                    Login log = new Login();    
+                    Login log = new Login();
                     log.Show();
                     this.Hide();
-                }  
+                }
             }
         }
 
@@ -99,6 +99,11 @@ namespace BurakT_ATM
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void AccNumTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

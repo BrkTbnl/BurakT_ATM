@@ -34,8 +34,8 @@
             label2 = new Label();
             label5 = new Label();
             button1 = new Button();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            Pin2 = new TextBox();
+            Pin1 = new TextBox();
             label13 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -61,6 +61,7 @@
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label1
             // 
@@ -107,33 +108,35 @@
             button1.TabIndex = 34;
             button1.Text = "Change";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // textBox5
+            // Pin2
             // 
-            textBox5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox5.Location = new Point(273, 186);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(236, 38);
-            textBox5.TabIndex = 36;
+            Pin2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            Pin2.Location = new Point(273, 186);
+            Pin2.Name = "Pin2";
+            Pin2.Size = new Size(236, 38);
+            Pin2.TabIndex = 36;
             // 
-            // textBox6
+            // Pin1
             // 
-            textBox6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox6.Location = new Point(273, 128);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(236, 38);
-            textBox6.TabIndex = 35;
+            Pin1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            Pin1.Location = new Point(273, 128);
+            Pin1.Name = "Pin1";
+            Pin1.Size = new Size(236, 38);
+            Pin1.TabIndex = 35;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(233, 287);
+            label13.Location = new Point(249, 287);
             label13.Name = "label13";
-            label13.Size = new Size(91, 31);
+            label13.Size = new Size(66, 31);
             label13.TabIndex = 37;
-            label13.Text = "Logout";
+            label13.Text = "Back";
+            label13.Click += label13_Click;
             // 
             // ChangePin
             // 
@@ -142,8 +145,8 @@
             ClientSize = new Size(532, 327);
             ControlBox = false;
             Controls.Add(label13);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
+            Controls.Add(Pin2);
+            Controls.Add(Pin1);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label5);
@@ -166,8 +169,8 @@
         private Label label2;
         private Label label5;
         private Button button1;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox Pin2;
+        private TextBox Pin1;
         private Label label13;
     }
 }
