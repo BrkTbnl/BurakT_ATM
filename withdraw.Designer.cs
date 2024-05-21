@@ -33,10 +33,10 @@
             label1 = new Label();
             label2 = new Label();
             label13 = new Label();
-            textBox6 = new TextBox();
+            withdrawTb = new TextBox();
             button1 = new Button();
             label5 = new Label();
-            label3 = new Label();
+            balancelbl = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,6 +61,7 @@
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label1
             // 
@@ -78,7 +79,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(216, 79);
+            label2.Location = new Point(206, 79);
             label2.Name = "label2";
             label2.Size = new Size(108, 25);
             label2.TabIndex = 47;
@@ -89,19 +90,20 @@
             label13.AutoSize = true;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(233, 287);
+            label13.Location = new Point(248, 287);
             label13.Name = "label13";
-            label13.Size = new Size(91, 31);
+            label13.Size = new Size(66, 31);
             label13.TabIndex = 46;
-            label13.Text = "Logout";
+            label13.Text = "Back";
+            label13.Click += label13_Click;
             // 
-            // textBox6
+            // withdrawTb
             // 
-            textBox6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            textBox6.Location = new Point(266, 188);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(236, 38);
-            textBox6.TabIndex = 45;
+            withdrawTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            withdrawTb.Location = new Point(206, 188);
+            withdrawTb.Name = "withdrawTb";
+            withdrawTb.Size = new Size(236, 38);
+            withdrawTb.TabIndex = 45;
             // 
             // button1
             // 
@@ -114,28 +116,29 @@
             button1.TabIndex = 44;
             button1.Text = "Withdraw";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(21, 195);
+            label5.Location = new Point(84, 195);
             label5.Name = "label5";
-            label5.Size = new Size(239, 31);
+            label5.Size = new Size(99, 31);
             label5.TabIndex = 43;
-            label5.Text = "Amount To Withdraw";
+            label5.Text = "Amount";
             // 
-            // label3
+            // balancelbl
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(216, 119);
-            label3.Name = "label3";
-            label3.Size = new Size(80, 25);
-            label3.TabIndex = 48;
-            label3.Text = "Balance";
+            balancelbl.AutoSize = true;
+            balancelbl.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            balancelbl.ForeColor = Color.Black;
+            balancelbl.Location = new Point(206, 116);
+            balancelbl.Name = "balancelbl";
+            balancelbl.Size = new Size(163, 25);
+            balancelbl.TabIndex = 48;
+            balancelbl.Text = "Available Balance";
             // 
             // withdraw
             // 
@@ -143,10 +146,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 327);
             ControlBox = false;
-            Controls.Add(label3);
+            Controls.Add(balancelbl);
             Controls.Add(label2);
             Controls.Add(label13);
-            Controls.Add(textBox6);
+            Controls.Add(withdrawTb);
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(panel1);
@@ -154,6 +157,7 @@
             Name = "withdraw";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "withdraw";
+            Load += withdraw_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -167,9 +171,9 @@
         private Label label1;
         private Label label2;
         private Label label13;
-        private TextBox textBox6;
+        private TextBox withdrawTb;
         private Button button1;
         private Label label5;
-        private Label label3;
+        private Label balancelbl;
     }
 }

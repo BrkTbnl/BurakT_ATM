@@ -22,6 +22,11 @@ namespace BurakT_ATM
             {
                 MessageBox.Show("Missing Information");
             }
+            else if (!int.TryParse(AccNumTb.Text, out _) || !long.TryParse(PhoneTb.Text, out _) || !int.TryParse(pintb.Text, out _))
+            {
+                MessageBox.Show("Invalid numeric input");
+                return;
+            }
             else
             {
                 string query = "INSERT INTO AccountTbl (AccNum, Name, FaName, Dob, Phone, Address, Education, Occupation, Pin, Balance) " +
@@ -102,6 +107,11 @@ namespace BurakT_ATM
         }
 
         private void AccNumTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void account_Load(object sender, EventArgs e)
         {
 
         }

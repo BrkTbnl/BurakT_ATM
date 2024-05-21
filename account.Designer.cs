@@ -337,6 +337,7 @@ namespace BurakT_ATM
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "account";
+            Load += account_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

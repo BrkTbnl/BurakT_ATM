@@ -51,9 +51,12 @@ namespace BurakT_ATM
         {
 
         }
+        //withdraw button
         private void button2_Click(object sender, EventArgs e)
         {
-
+            withdraw wd = new withdraw();
+            wd.Show();
+            this.Hide();
         }
         //Deposit button
         private void button1_Click(object sender, EventArgs e)
