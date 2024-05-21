@@ -19,10 +19,10 @@ namespace BurakT_ATM
         private void getBalance()
         {
             Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select Balance from AccountTbl where AccNum='"+AccNumberlbl.Text+"'", Con);
+            SqlDataAdapter sda = new SqlDataAdapter("select Balance from AccountTbl where AccNum='" + AccNumberlbl.Text + "'", Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            Balancelbl.Text = "PLN "+ dt.Rows[0][0].ToString();
+            Balancelbl.Text = "PLN " + dt.Rows[0][0].ToString();
             Con.Close();
         }
 

@@ -78,7 +78,7 @@
             label13.AutoSize = true;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(233, 287);
+            label13.Location = new Point(454, 287);
             label13.Name = "label13";
             label13.Size = new Size(66, 31);
             label13.TabIndex = 41;
@@ -88,7 +88,7 @@
             // DepoAmtTb
             // 
             DepoAmtTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            DepoAmtTb.Location = new Point(206, 158);
+            DepoAmtTb.Location = new Point(171, 162);
             DepoAmtTb.Name = "DepoAmtTb";
             DepoAmtTb.Size = new Size(236, 38);
             DepoAmtTb.TabIndex = 40;
@@ -98,7 +98,7 @@
             button1.BackColor = SystemColors.HotTrack;
             button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(206, 241);
+            button1.Location = new Point(371, 241);
             button1.Name = "button1";
             button1.Size = new Size(149, 43);
             button1.TabIndex = 39;
@@ -111,7 +111,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(86, 158);
+            label5.Location = new Point(28, 165);
             label5.Name = "label5";
             label5.Size = new Size(106, 31);
             label5.TabIndex = 38;
@@ -122,7 +122,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(221, 97);
+            label2.Location = new Point(222, 79);
             label2.Name = "label2";
             label2.Size = new Size(86, 25);
             label2.TabIndex = 42;

@@ -83,7 +83,7 @@
             // 
             pictureBox1.BackColor = Color.White;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(43, 212);
+            pictureBox1.Location = new Point(637, 241);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(131, 106);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -95,7 +95,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(208, 219);
+            label3.Location = new Point(12, 219);
             label3.Name = "label3";
             label3.Size = new Size(194, 31);
             label3.TabIndex = 3;
@@ -107,7 +107,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(208, 287);
+            label4.Location = new Point(12, 280);
             label4.Name = "label4";
             label4.Size = new Size(119, 31);
             label4.TabIndex = 4;
@@ -116,7 +116,7 @@
             // AccNumTb
             // 
             AccNumTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            AccNumTb.Location = new Point(464, 212);
+            AccNumTb.Location = new Point(234, 212);
             AccNumTb.Name = "AccNumTb";
             AccNumTb.Size = new Size(236, 38);
             AccNumTb.TabIndex = 5;
@@ -124,7 +124,7 @@
             // PinTb
             // 
             PinTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            PinTb.Location = new Point(464, 280);
+            PinTb.Location = new Point(234, 273);
             PinTb.Name = "PinTb";
             PinTb.Size = new Size(236, 38);
             PinTb.TabIndex = 6;
@@ -134,7 +134,7 @@
             button1.BackColor = SystemColors.HotTrack;
             button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(513, 343);
+            button1.Location = new Point(628, 353);
             button1.Name = "button1";
             button1.Size = new Size(149, 43);
             button1.TabIndex = 7;
@@ -147,7 +147,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(371, 113);
+            label2.Location = new Point(368, 79);
             label2.Name = "label2";
             label2.Size = new Size(84, 31);
             label2.TabIndex = 8;
@@ -158,7 +158,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(563, 399);
+            label5.Location = new Point(678, 399);
             label5.Name = "label5";
             label5.Size = new Size(99, 31);
             label5.TabIndex = 9;

@@ -83,7 +83,7 @@
             button1.BackColor = SystemColors.HotTrack;
             button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(69, 130);
+            button1.Location = new Point(71, 233);
             button1.Name = "button1";
             button1.Size = new Size(257, 43);
             button1.TabIndex = 8;
@@ -96,7 +96,7 @@
             button2.BackColor = SystemColors.HotTrack;
             button2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(491, 130);
+            button2.Location = new Point(71, 329);
             button2.Name = "button2";
             button2.Size = new Size(250, 43);
             button2.TabIndex = 9;
@@ -109,7 +109,7 @@
             button3.BackColor = SystemColors.HotTrack;
             button3.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(69, 208);
+            button3.Location = new Point(481, 130);
             button3.Name = "button3";
             button3.Size = new Size(257, 43);
             button3.TabIndex = 10;
@@ -122,7 +122,7 @@
             button4.BackColor = SystemColors.HotTrack;
             button4.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(491, 208);
+            button4.Location = new Point(481, 233);
             button4.Name = "button4";
             button4.Size = new Size(250, 43);
             button4.TabIndex = 11;
@@ -135,7 +135,7 @@
             button5.BackColor = SystemColors.HotTrack;
             button5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(69, 279);
+            button5.Location = new Point(481, 329);
             button5.Name = "button5";
             button5.Size = new Size(257, 43);
             button5.TabIndex = 12;
@@ -148,7 +148,7 @@
             button6.BackColor = SystemColors.HotTrack;
             button6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(491, 279);
+            button6.Location = new Point(71, 130);
             button6.Name = "button6";
             button6.Size = new Size(250, 43);
             button6.TabIndex = 13;
@@ -160,9 +160,9 @@
             // 
             panel2.BackColor = SystemColors.HotTrack;
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 438);
+            panel2.Location = new Point(0, 440);
             panel2.Name = "panel2";
-            panel2.Size = new Size(800, 12);
+            panel2.Size = new Size(800, 10);
             panel2.TabIndex = 14;
             // 
             // label5
@@ -170,7 +170,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(354, 394);
+            label5.Location = new Point(697, 394);
             label5.Name = "label5";
             label5.Size = new Size(91, 31);
             label5.TabIndex = 15;
@@ -182,7 +182,7 @@
             AccNumlbl.AutoSize = true;
             AccNumlbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             AccNumlbl.ForeColor = Color.Black;
-            AccNumlbl.Location = new Point(302, 96);
+            AccNumlbl.Location = new Point(303, 394);
             AccNumlbl.Name = "AccNumlbl";
             AccNumlbl.Size = new Size(194, 31);
             AccNumlbl.TabIndex = 16;

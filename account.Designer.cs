@@ -110,9 +110,9 @@ namespace BurakT_ATM
             label3.ForeColor = Color.Black;
             label3.Location = new Point(0, 147);
             label3.Name = "label3";
-            label3.Size = new Size(77, 25);
+            label3.Size = new Size(72, 25);
             label3.TabIndex = 11;
-            label3.Text = "NAME";
+            label3.Text = "Name";
             // 
             // label4
             // 
@@ -121,9 +121,9 @@ namespace BurakT_ATM
             label4.ForeColor = Color.Black;
             label4.Location = new Point(0, 187);
             label4.Name = "label4";
-            label4.Size = new Size(91, 25);
+            label4.Size = new Size(105, 25);
             label4.TabIndex = 12;
-            label4.Text = "FNAME";
+            label4.Text = "Surname";
             label4.Click += label4_Click;
             // 
             // label6
@@ -133,9 +133,9 @@ namespace BurakT_ATM
             label6.ForeColor = Color.Black;
             label6.Location = new Point(0, 237);
             label6.Name = "label6";
-            label6.Size = new Size(120, 25);
+            label6.Size = new Size(98, 25);
             label6.TabIndex = 13;
-            label6.Text = "ADDRESS";
+            label6.Text = "Address";
             // 
             // label7
             // 
@@ -144,9 +144,9 @@ namespace BurakT_ATM
             label7.ForeColor = Color.Black;
             label7.Location = new Point(278, 237);
             label7.Name = "label7";
-            label7.Size = new Size(91, 25);
+            label7.Size = new Size(79, 25);
             label7.TabIndex = 14;
-            label7.Text = "PHONE";
+            label7.Text = "Phone";
             // 
             // label8
             // 
@@ -155,9 +155,9 @@ namespace BurakT_ATM
             label8.ForeColor = Color.Black;
             label8.Location = new Point(278, 147);
             label8.Name = "label8";
-            label8.Size = new Size(143, 25);
+            label8.Size = new Size(117, 25);
             label8.TabIndex = 15;
-            label8.Text = "EDUCATION";
+            label8.Text = "Education";
             // 
             // label9
             // 
@@ -166,9 +166,9 @@ namespace BurakT_ATM
             label9.ForeColor = Color.Black;
             label9.Location = new Point(278, 187);
             label9.Name = "label9";
-            label9.Size = new Size(160, 25);
+            label9.Size = new Size(131, 25);
             label9.TabIndex = 16;
-            label9.Text = "OCCUPATION";
+            label9.Text = "Occupation";
             label9.Click += label9_Click;
             // 
             // label10
@@ -189,9 +189,9 @@ namespace BurakT_ATM
             label12.ForeColor = Color.Black;
             label12.Location = new Point(278, 99);
             label12.Name = "label12";
-            label12.Size = new Size(49, 25);
+            label12.Size = new Size(108, 25);
             label12.TabIndex = 19;
-            label12.Text = "PIN";
+            label12.Text = "Pin Code";
             // 
             // AccNametb
             // 
@@ -267,7 +267,7 @@ namespace BurakT_ATM
             button1.BackColor = SystemColors.HotTrack;
             button1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(258, 335);
+            button1.Location = new Point(479, 344);
             button1.Name = "button1";
             button1.Size = new Size(149, 43);
             button1.TabIndex = 33;
@@ -289,7 +289,7 @@ namespace BurakT_ATM
             label13.AutoSize = true;
             label13.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(291, 381);
+            label13.Location = new Point(544, 388);
             label13.Name = "label13";
             label13.Size = new Size(84, 25);
             label13.TabIndex = 35;
