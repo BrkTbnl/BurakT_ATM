@@ -57,8 +57,49 @@ namespace BurakT_ATM
 
 
 
-        // deposit function
-        private void button1_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
+
+        private void getBalance()
+        {
+            try
+            {
+                Con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select Balance from AccountTbl where AccNum='" + Acc + "'", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    oldbalance = Convert.ToInt32(dt.Rows[0]["Balance"]);
+                }
+                else
+                {
+                    MessageBox.Show("Account not found!");
+                }
+                Con.Close();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void Deposit_Load(object sender, EventArgs e)
+        {
+            getBalance();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //Deposit button
+        private void customButton1_Click(object sender, EventArgs e)
         {
             int depositAmount;
             if (string.IsNullOrEmpty(DepoAmtTb.Text) || !int.TryParse(DepoAmtTb.Text, out depositAmount) || depositAmount <= 0)
@@ -97,50 +138,12 @@ namespace BurakT_ATM
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
+        //Turn Back 
+        private void customButton2_Click(object sender, EventArgs e)
         {
             HOME home = new HOME();
             home.Show();
             this.Hide();
-        }
-
-        private void getBalance()
-        {
-            try
-            {
-                Con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("select Balance from AccountTbl where AccNum='" + Acc + "'", Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    oldbalance = Convert.ToInt32(dt.Rows[0]["Balance"]);
-                }
-                else
-                {
-                    MessageBox.Show("Account not found!");
-                }
-                Con.Close();
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
-            }
-        }
-
-        private void Deposit_Load(object sender, EventArgs e)
-        {
-            getBalance();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 

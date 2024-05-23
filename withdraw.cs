@@ -151,5 +151,57 @@ namespace BurakT_ATM
         {
 
         }
+
+        //Withdraw button
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(withdrawTb.Text))
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else if (!int.TryParse(withdrawTb.Text, out int withdrawAmount) || withdrawAmount <= 0)
+            {
+                MessageBox.Show("Please enter a valid Amount");
+            }
+            else if (withdrawAmount > bal)
+            {
+                MessageBox.Show("Balance cannot be negative");
+            }
+            else
+            {
+                int newbalance = bal - withdrawAmount;
+                try
+                {
+                    Con.Open();
+                    string query = "update AccountTbl set Balance = @NewBalance where AccNum = @AccNum";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.Parameters.AddWithValue("@NewBalance", newbalance);
+                    cmd.Parameters.AddWithValue("@AccNum", Acc);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Success Withdraw!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("An Error Occurred:\n " + Ex.Message);
+                }
+                finally
+                {
+                    Con.Close();
+                    addTransaction(Acc, trType, withdrawAmount);
+                }
+
+                HOME hOME = new HOME();
+                hOME.Show();
+                this.Hide();
+            }
+
+        }
+        //Back button
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            HOME home = new HOME();
+            home.Show();
+            this.Hide();
+        }
     }
 }

@@ -14,8 +14,58 @@ namespace BurakT_ATM
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
 
 
+
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+
+        {
+
+            // Add your panel1_Paint logic here
+
+        }
+
+
+        private void label4_Click(object sender, EventArgs e)
+
+        {
+
+            // Add your label4_Click logic here
+
+        }
+
+
+        private void label9_Click(object sender, EventArgs e)
+
+        {
+
+            // Add your label9_Click logic here
+
+        }
+
+
+        //Account exit
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AccNumTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void account_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         //Account submit button
-        private void button1_Click(object sender, EventArgs e)
+        private void customButton1_Click(object sender, EventArgs e)
         {
             int bal = 0;
             if (AccNametb.Text == "" || AccNumTb.Text == "" || FanameTb.Text == "" || PhoneTb.Text == "" || Addresstb.Text == "" || occupationtb.Text == "" || pintb.Text == "")
@@ -64,59 +114,15 @@ namespace BurakT_ATM
             }
         }
 
-
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-
-        {
-
-            // Add your panel1_Paint logic here
-
-        }
-
-
-        private void label4_Click(object sender, EventArgs e)
-
-        {
-
-            // Add your label4_Click logic here
-
-        }
-
-
-        private void label9_Click(object sender, EventArgs e)
-
-        {
-
-            // Add your label9_Click logic here
-
-        }
-
-        //Account Logout
-        private void label13_Click(object sender, EventArgs e)
+        //Account turnback to login
+        private void customButton2_Click(object sender, EventArgs e)
         {
             Login log = new Login();
             log.Show();
             this.Hide();
         }
 
-        //Account exit
-        private void label2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void AccNumTb_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void account_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

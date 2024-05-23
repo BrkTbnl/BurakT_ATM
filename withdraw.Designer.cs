@@ -28,36 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
             label2 = new Label();
-            label13 = new Label();
             withdrawTb = new TextBox();
-            button1 = new Button();
             label5 = new Label();
             balancelbl = new Label();
-            panel1.SuspendLayout();
+            customButton1 = new UiTools.CustomButton.CustomButton();
+            customButton2 = new UiTools.CustomButton.CustomButton();
+            gradientPanel1 = new UiTools.GradientPanel();
+            gradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(532, 76);
-            panel1.TabIndex = 2;
-            panel1.Paint += panel1_Paint;
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(503, 0);
+            label6.Location = new Point(491, 9);
             label6.Name = "label6";
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
@@ -67,64 +56,42 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(99, 22);
+            label1.Location = new Point(160, 9);
             label1.Name = "label1";
-            label1.Size = new Size(327, 31);
+            label1.Size = new Size(234, 31);
             label1.TabIndex = 1;
-            label1.Text = "ATM MANAGEMENT SYSTEM";
+            label1.Text = "X Bank Atm Systems";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(206, 79);
+            label2.Location = new Point(223, 49);
             label2.Name = "label2";
             label2.Size = new Size(108, 25);
             label2.TabIndex = 47;
             label2.Text = "WITHDRAW";
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(248, 287);
-            label13.Name = "label13";
-            label13.Size = new Size(66, 31);
-            label13.TabIndex = 46;
-            label13.Text = "Back";
-            label13.Click += label13_Click;
-            // 
             // withdrawTb
             // 
             withdrawTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            withdrawTb.Location = new Point(206, 188);
+            withdrawTb.Location = new Point(193, 152);
             withdrawTb.Name = "withdrawTb";
             withdrawTb.Size = new Size(236, 38);
             withdrawTb.TabIndex = 45;
             // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.HotTrack;
-            button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(206, 241);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 43);
-            button1.TabIndex = 44;
-            button1.Text = "Withdraw";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(84, 195);
+            label5.Location = new Point(71, 159);
             label5.Name = "label5";
             label5.Size = new Size(99, 31);
             label5.TabIndex = 43;
@@ -133,14 +100,67 @@
             // balancelbl
             // 
             balancelbl.AutoSize = true;
+            balancelbl.BackColor = Color.Transparent;
             balancelbl.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             balancelbl.ForeColor = Color.Black;
-            balancelbl.Location = new Point(206, 116);
+            balancelbl.Location = new Point(193, 215);
             balancelbl.Name = "balancelbl";
             balancelbl.Size = new Size(163, 25);
             balancelbl.TabIndex = 48;
             balancelbl.Text = "Available Balance";
             balancelbl.Click += balancelbl_Click;
+            // 
+            // customButton1
+            // 
+            customButton1.Angle = 56F;
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.ButtonText = "Withdraw";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(370, 272);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 43);
+            customButton1.TabIndex = 49;
+            customButton1.Click += customButton1_Click;
+            // 
+            // customButton2
+            // 
+            customButton2.Angle = 47F;
+            customButton2.BackColor = Color.Transparent;
+            customButton2.BorderRadius = 30;
+            customButton2.ButtonText = "Back";
+            customButton2.Color0 = SystemColors.HotTrack;
+            customButton2.Color1 = Color.LightSkyBlue;
+            customButton2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton2.ForeColor = Color.Black;
+            customButton2.Location = new Point(12, 272);
+            customButton2.Name = "customButton2";
+            customButton2.Size = new Size(150, 43);
+            customButton2.TabIndex = 50;
+            customButton2.Click += customButton2_Click;
+            // 
+            // gradientPanel1
+            // 
+            gradientPanel1.angle = 90F;
+            gradientPanel1.BackColor = SystemColors.HotTrack;
+            gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(label2);
+            gradientPanel1.Controls.Add(label6);
+            gradientPanel1.Controls.Add(label5);
+            gradientPanel1.Controls.Add(customButton2);
+            gradientPanel1.Controls.Add(withdrawTb);
+            gradientPanel1.Controls.Add(label1);
+            gradientPanel1.Controls.Add(balancelbl);
+            gradientPanel1.Controls.Add(customButton1);
+            gradientPanel1.Dock = DockStyle.Fill;
+            gradientPanel1.Location = new Point(0, 0);
+            gradientPanel1.Name = "gradientPanel1";
+            gradientPanel1.Size = new Size(532, 327);
+            gradientPanel1.TabIndex = 51;
+            gradientPanel1.TopColor = Color.LightSkyBlue;
             // 
             // withdraw
             // 
@@ -148,34 +168,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 327);
             ControlBox = false;
-            Controls.Add(balancelbl);
-            Controls.Add(label2);
-            Controls.Add(label13);
-            Controls.Add(withdrawTb);
-            Controls.Add(button1);
-            Controls.Add(label5);
-            Controls.Add(panel1);
+            Controls.Add(gradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "withdraw";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "withdraw";
             Load += withdraw_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            gradientPanel1.ResumeLayout(false);
+            gradientPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
         private Label label6;
         private Label label1;
         private Label label2;
-        private Label label13;
         private TextBox withdrawTb;
-        private Button button1;
         private Label label5;
         private Label balancelbl;
+        private UiTools.CustomButton.CustomButton customButton1;
+        private UiTools.CustomButton.CustomButton customButton2;
+        private UiTools.GradientPanel gradientPanel1;
     }
 }

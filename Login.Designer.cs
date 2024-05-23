@@ -36,10 +36,9 @@ namespace BurakT_ATM
             label4 = new Label();
             AccNumTb = new TextBox();
             PinTb = new TextBox();
-            button1 = new Button();
             label2 = new Label();
-            label5 = new Label();
             gradientPanel1 = new GradientPanel();
+            customButton2 = new UiTools.CustomButton.CustomButton();
             customButton1 = new UiTools.CustomButton.CustomButton();
             label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -50,7 +49,7 @@ namespace BurakT_ATM
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(644, 241);
+            pictureBox1.Location = new Point(554, 160);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(131, 106);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -76,7 +75,7 @@ namespace BurakT_ATM
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(19, 228);
+            label4.Location = new Point(19, 235);
             label4.Name = "label4";
             label4.Size = new Size(119, 31);
             label4.TabIndex = 4;
@@ -93,23 +92,10 @@ namespace BurakT_ATM
             // PinTb
             // 
             PinTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            PinTb.Location = new Point(241, 221);
+            PinTb.Location = new Point(241, 228);
             PinTb.Name = "PinTb";
             PinTb.Size = new Size(236, 38);
             PinTb.TabIndex = 6;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.HotTrack;
-            button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(626, 353);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 43);
-            button1.TabIndex = 7;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // label2
             // 
@@ -123,31 +109,17 @@ namespace BurakT_ATM
             label2.TabIndex = 8;
             label2.Text = "LOGIN";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(676, 399);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 31);
-            label5.TabIndex = 9;
-            label5.Text = "SIGNUP";
-            label5.Click += label5_Click;
-            // 
             // gradientPanel1
             // 
-            gradientPanel1.angle = 90F;
+            gradientPanel1.angle = 0F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton2);
             gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label6);
             gradientPanel1.Controls.Add(label2);
-            gradientPanel1.Controls.Add(label5);
             gradientPanel1.Controls.Add(pictureBox1);
             gradientPanel1.Controls.Add(label3);
-            gradientPanel1.Controls.Add(button1);
             gradientPanel1.Controls.Add(label4);
             gradientPanel1.Controls.Add(PinTb);
             gradientPanel1.Controls.Add(AccNumTb);
@@ -160,17 +132,36 @@ namespace BurakT_ATM
             gradientPanel1.TopColor = Color.LightSkyBlue;
             gradientPanel1.Paint += gradientPanel1_Paint;
             // 
+            // customButton2
+            // 
+            customButton2.Angle = 306F;
+            customButton2.BackColor = Color.Transparent;
+            customButton2.BorderRadius = 30;
+            customButton2.ButtonText = "Sign-Up";
+            customButton2.Color0 = SystemColors.HotTrack;
+            customButton2.Color1 = Color.LightSkyBlue;
+            customButton2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton2.ForeColor = Color.Black;
+            customButton2.Location = new Point(19, 387);
+            customButton2.Name = "customButton2";
+            customButton2.Size = new Size(150, 43);
+            customButton2.TabIndex = 13;
+            customButton2.Click += customButton2_Click;
+            // 
             // customButton1
             // 
+            customButton1.Angle = 242F;
             customButton1.BackColor = Color.Transparent;
             customButton1.BorderRadius = 30;
-            customButton1.Color0 = Color.Blue;
-            customButton1.Color1 = Color.Orange;
-            customButton1.Location = new Point(355, 363);
+            customButton1.ButtonText = "Login";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(626, 387);
             customButton1.Name = "customButton1";
-            customButton1.Size = new Size(150, 67);
+            customButton1.Size = new Size(150, 43);
             customButton1.TabIndex = 12;
-
             customButton1.Click += customButton1_Click;
             // 
             // label6
@@ -210,11 +201,10 @@ namespace BurakT_ATM
         private Label label4;
         private TextBox AccNumTb;
         private TextBox PinTb;
-        private Button button1;
         private Label label2;
-        private Label label5;
         private GradientPanel gradientPanel1;
         private Label label6;
         private UiTools.CustomButton.CustomButton customButton1;
+        private UiTools.CustomButton.CustomButton customButton2;
     }
 }

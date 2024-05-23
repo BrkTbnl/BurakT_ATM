@@ -173,12 +173,6 @@ namespace BurakT_ATM
             getBalance();
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-            HOME home = new HOME();
-            home.Show();
-            this.Hide();
-        }
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -199,6 +193,19 @@ namespace BurakT_ATM
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //back button
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            HOME home = new HOME();
+            home.Show();
+            this.Hide();
         }
     }
 }

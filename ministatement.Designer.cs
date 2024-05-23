@@ -31,9 +31,9 @@
             label6 = new Label();
             label1 = new Label();
             label2 = new Label();
-            label13 = new Label();
             MiniStatementDGV = new DataGridView();
             gradientPanel1 = new UiTools.GradientPanel();
+            customButton1 = new UiTools.CustomButton.CustomButton();
             ((System.ComponentModel.ISupportInitialize)MiniStatementDGV).BeginInit();
             gradientPanel1.SuspendLayout();
             SuspendLayout();
@@ -74,19 +74,6 @@
             label2.TabIndex = 43;
             label2.Text = "MINI STATEMENT";
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(562, 388);
-            label13.Name = "label13";
-            label13.Size = new Size(66, 31);
-            label13.TabIndex = 45;
-            label13.Text = "Back";
-            label13.Click += label13_Click;
-            // 
             // MiniStatementDGV
             // 
             MiniStatementDGV.BackgroundColor = Color.White;
@@ -99,12 +86,12 @@
             // 
             // gradientPanel1
             // 
-            gradientPanel1.angle = 60F;
+            gradientPanel1.angle = 45F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label2);
             gradientPanel1.Controls.Add(label6);
-            gradientPanel1.Controls.Add(label13);
             gradientPanel1.Controls.Add(MiniStatementDGV);
             gradientPanel1.Controls.Add(label1);
             gradientPanel1.Dock = DockStyle.Fill;
@@ -114,6 +101,22 @@
             gradientPanel1.TabIndex = 47;
             gradientPanel1.TopColor = Color.LightSkyBlue;
             gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
+            // customButton1
+            // 
+            customButton1.Angle = 332F;
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.ButtonText = "Back";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(12, 377);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 43);
+            customButton1.TabIndex = 47;
+            customButton1.Click += customButton1_Click;
             // 
             // ministatement
             // 
@@ -137,8 +140,8 @@
         private Label label6;
         private Label label1;
         private Label label2;
-        private Label label13;
         private DataGridView MiniStatementDGV;
         private UiTools.GradientPanel gradientPanel1;
+        private UiTools.CustomButton.CustomButton customButton1;
     }
 }

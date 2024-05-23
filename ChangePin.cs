@@ -25,8 +25,41 @@ namespace BurakT_ATM
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
 
-        //change button
-        private void button1_Click(object sender, EventArgs e)
+
+        //Pin character check
+        private bool ContainsDuplicateCharacters(string input)
+        {
+            HashSet<char> charSet = new HashSet<char>();
+            foreach (char c in input)
+            {
+                if (charSet.Contains(c))
+                {
+                    return true;
+                }
+                charSet.Add(c);
+            }
+            return false;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //Change pin
+        private void customButton1_Click(object sender, EventArgs e)
         {
 
             String Acc = Login.AccNumber;
@@ -68,44 +101,14 @@ namespace BurakT_ATM
                 login.Show();
                 this.Hide();
             }
-
         }
 
-        //Pin character check
-        private bool ContainsDuplicateCharacters(string input)
-        {
-            HashSet<char> charSet = new HashSet<char>();
-            foreach (char c in input)
-            {
-                if (charSet.Contains(c))
-                {
-                    return true;
-                }
-                charSet.Add(c);
-            }
-            return false;
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
+        //Turn Back
+        private void customButton2_Click(object sender, EventArgs e)
         {
             HOME home = new HOME();
             home.Show();
             this.Hide();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

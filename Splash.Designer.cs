@@ -39,7 +39,7 @@
             // 
             // gradientPanel1
             // 
-            gradientPanel1.angle = 60F;
+            gradientPanel1.angle = 0F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
             gradientPanel1.Controls.Add(percentage);

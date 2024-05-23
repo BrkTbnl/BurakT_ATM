@@ -14,6 +14,12 @@ namespace BurakT_ATM
 {
     public partial class Login : Form
     {
+
+
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
+        public static string AccNumber;
+
+
         public Login()
         {
             InitializeComponent();
@@ -24,20 +30,41 @@ namespace BurakT_ATM
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+      
+        private void label1_Click(object sender, EventArgs e)
         {
-            account acc = new account();
-            acc.Show();
-            this.Hide();
 
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
 
+        private void Login_Load(object sender, EventArgs e)
+        {
 
-        public static string AccNumber;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         //Login page Login button
-        private void button1_Click(object sender, EventArgs e)
+
+        private void customButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -79,44 +106,14 @@ namespace BurakT_ATM
             {
                 Con.Close();
             }
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        //Sign up
+        private void customButton2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-       
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("its working");
+            account acc = new account();
+            acc.Show();
+            this.Hide();
         }
     }
 }

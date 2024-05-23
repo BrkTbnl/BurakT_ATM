@@ -38,8 +38,8 @@
             button1 = new Button();
             label2 = new Label();
             BalanceLbl = new Label();
-            label13 = new Label();
             gradientPanel1 = new UiTools.GradientPanel();
+            customButton1 = new UiTools.CustomButton.CustomButton();
             gradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -164,35 +164,22 @@
             BalanceLbl.BackColor = Color.Transparent;
             BalanceLbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BalanceLbl.ForeColor = Color.Black;
-            BalanceLbl.Location = new Point(12, 392);
+            BalanceLbl.Location = new Point(402, 389);
             BalanceLbl.Name = "BalanceLbl";
             BalanceLbl.Size = new Size(200, 31);
             BalanceLbl.TabIndex = 43;
             BalanceLbl.Text = "Available Balance";
             BalanceLbl.Click += label3_Click;
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(562, 392);
-            label13.Name = "label13";
-            label13.Size = new Size(66, 31);
-            label13.TabIndex = 44;
-            label13.Text = "Back";
-            label13.Click += label13_Click;
-            // 
             // gradientPanel1
             // 
-            gradientPanel1.angle = 60F;
+            gradientPanel1.angle = 90F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label1);
             gradientPanel1.Controls.Add(label6);
             gradientPanel1.Controls.Add(button1);
-            gradientPanel1.Controls.Add(label13);
             gradientPanel1.Controls.Add(button2);
             gradientPanel1.Controls.Add(button3);
             gradientPanel1.Controls.Add(BalanceLbl);
@@ -206,6 +193,23 @@
             gradientPanel1.Size = new Size(640, 432);
             gradientPanel1.TabIndex = 45;
             gradientPanel1.TopColor = Color.LightSkyBlue;
+            gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
+            // customButton1
+            // 
+            customButton1.Angle = 301F;
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.ButtonText = "Back";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(12, 377);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 43);
+            customButton1.TabIndex = 45;
+            customButton1.Click += customButton1_Click;
             // 
             // FASTCASH
             // 
@@ -235,7 +239,7 @@
         private Button button1;
         private Label label2;
         private Label BalanceLbl;
-        private Label label13;
         private UiTools.GradientPanel gradientPanel1;
+        private UiTools.CustomButton.CustomButton customButton1;
     }
 }

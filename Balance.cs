@@ -69,12 +69,18 @@ namespace BurakT_ATM
             Application.Exit();
         }
 
-        private void label13_Click(object sender, EventArgs e)
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //Balance turn back
+        private void customButton1_Click(object sender, EventArgs e)
         {
             HOME home = new HOME();
             this.Hide();
             home.Show();
-
         }
     }
 }

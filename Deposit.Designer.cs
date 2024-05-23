@@ -30,12 +30,12 @@
         {
             label6 = new Label();
             label1 = new Label();
-            label13 = new Label();
             DepoAmtTb = new TextBox();
-            button1 = new Button();
             label5 = new Label();
             label2 = new Label();
             gradientPanel1 = new UiTools.GradientPanel();
+            customButton2 = new UiTools.CustomButton.CustomButton();
+            customButton1 = new UiTools.CustomButton.CustomButton();
             gradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,19 +63,6 @@
             label1.TabIndex = 1;
             label1.Text = "X Bank ATM Systems";
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(454, 287);
-            label13.Name = "label13";
-            label13.Size = new Size(66, 31);
-            label13.TabIndex = 41;
-            label13.Text = "Back";
-            label13.Click += label13_Click;
-            // 
             // DepoAmtTb
             // 
             DepoAmtTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
@@ -83,19 +70,6 @@
             DepoAmtTb.Name = "DepoAmtTb";
             DepoAmtTb.Size = new Size(236, 38);
             DepoAmtTb.TabIndex = 40;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.HotTrack;
-            button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(371, 241);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 43);
-            button1.TabIndex = 39;
-            button1.Text = "Deposit";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // label5
             // 
@@ -123,21 +97,53 @@
             // 
             // gradientPanel1
             // 
-            gradientPanel1.angle = 60F;
+            gradientPanel1.angle = 90F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton2);
+            gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label2);
             gradientPanel1.Controls.Add(label5);
-            gradientPanel1.Controls.Add(button1);
             gradientPanel1.Controls.Add(label1);
             gradientPanel1.Controls.Add(DepoAmtTb);
-            gradientPanel1.Controls.Add(label13);
             gradientPanel1.Dock = DockStyle.Fill;
             gradientPanel1.Location = new Point(0, 0);
             gradientPanel1.Name = "gradientPanel1";
             gradientPanel1.Size = new Size(532, 327);
             gradientPanel1.TabIndex = 43;
             gradientPanel1.TopColor = Color.LightSkyBlue;
+            // 
+            // customButton2
+            // 
+            customButton2.Angle = 355F;
+            customButton2.BackColor = Color.Transparent;
+            customButton2.BorderRadius = 30;
+            customButton2.ButtonText = "Back";
+            customButton2.Color0 = SystemColors.HotTrack;
+            customButton2.Color1 = Color.LightSkyBlue;
+            customButton2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton2.ForeColor = Color.Black;
+            customButton2.Location = new Point(12, 272);
+            customButton2.Name = "customButton2";
+            customButton2.Size = new Size(150, 43);
+            customButton2.TabIndex = 44;
+            customButton2.Click += customButton2_Click;
+            // 
+            // customButton1
+            // 
+            customButton1.Angle = 26F;
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.ButtonText = "Deposit";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(370, 272);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 43);
+            customButton1.TabIndex = 43;
+            customButton1.Click += customButton1_Click;
             // 
             // Deposit
             // 
@@ -161,11 +167,11 @@
         #endregion
         private Label label6;
         private Label label1;
-        private Label label13;
         private TextBox DepoAmtTb;
-        private Button button1;
         private Label label5;
         private Label label2;
         private UiTools.GradientPanel gradientPanel1;
+        private UiTools.CustomButton.CustomButton customButton2;
+        private UiTools.CustomButton.CustomButton customButton1;
     }
 }

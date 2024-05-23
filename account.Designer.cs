@@ -50,10 +50,10 @@ namespace BurakT_ATM
             PhoneTb = new TextBox();
             educationcb = new ComboBox();
             dobdate = new DateTimePicker();
-            button1 = new Button();
-            label13 = new Label();
             occupationtb = new TextBox();
             gradientPanel1 = new GradientPanel();
+            customButton2 = new UiTools.CustomButton.CustomButton();
+            customButton1 = new UiTools.CustomButton.CustomButton();
             gradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -262,32 +262,6 @@ namespace BurakT_ATM
             dobdate.Size = new Size(165, 31);
             dobdate.TabIndex = 32;
             // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.HotTrack;
-            button1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(480, 350);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 43);
-            button1.TabIndex = 33;
-            button1.Text = "Submit";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(544, 398);
-            label13.Name = "label13";
-            label13.Size = new Size(84, 25);
-            label13.TabIndex = 35;
-            label13.Text = "Logout";
-            label13.Click += label13_Click;
-            // 
             // occupationtb
             // 
             occupationtb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
@@ -298,9 +272,11 @@ namespace BurakT_ATM
             // 
             // gradientPanel1
             // 
-            gradientPanel1.angle = 60F;
+            gradientPanel1.angle = 90F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton2);
+            gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label5);
             gradientPanel1.Controls.Add(label2);
             gradientPanel1.Controls.Add(label3);
@@ -308,9 +284,7 @@ namespace BurakT_ATM
             gradientPanel1.Controls.Add(label4);
             gradientPanel1.Controls.Add(label1);
             gradientPanel1.Controls.Add(label6);
-            gradientPanel1.Controls.Add(label13);
             gradientPanel1.Controls.Add(label7);
-            gradientPanel1.Controls.Add(button1);
             gradientPanel1.Controls.Add(label8);
             gradientPanel1.Controls.Add(dobdate);
             gradientPanel1.Controls.Add(label9);
@@ -329,6 +303,39 @@ namespace BurakT_ATM
             gradientPanel1.Size = new Size(640, 432);
             gradientPanel1.TabIndex = 37;
             gradientPanel1.TopColor = Color.LightSkyBlue;
+            gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
+            // customButton2
+            // 
+            customButton2.Angle = 76F;
+            customButton2.BackColor = Color.Transparent;
+            customButton2.BorderRadius = 30;
+            customButton2.ButtonText = "Login";
+            customButton2.Color0 = SystemColors.HotTrack;
+            customButton2.Color1 = Color.LightSkyBlue;
+            customButton2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton2.ForeColor = Color.Black;
+            customButton2.Location = new Point(12, 377);
+            customButton2.Name = "customButton2";
+            customButton2.Size = new Size(150, 43);
+            customButton2.TabIndex = 38;
+            customButton2.Click += customButton2_Click;
+            // 
+            // customButton1
+            // 
+            customButton1.Angle = 111F;
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.ButtonText = "Submit";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(478, 377);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 43);
+            customButton1.TabIndex = 37;
+            customButton1.Click += customButton1_Click;
             // 
             // account
             // 
@@ -374,9 +381,9 @@ namespace BurakT_ATM
         private TextBox PhoneTb;
         private ComboBox educationcb;
         private DateTimePicker dobdate;
-        private Button button1;
-        private Label label13;
         private TextBox occupationtb;
         private GradientPanel gradientPanel1;
+        private UiTools.CustomButton.CustomButton customButton2;
+        private UiTools.CustomButton.CustomButton customButton1;
     }
 }

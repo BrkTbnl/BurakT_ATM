@@ -32,11 +32,11 @@
             label1 = new Label();
             label2 = new Label();
             label5 = new Label();
-            button1 = new Button();
             Pin2 = new TextBox();
             Pin1 = new TextBox();
-            label13 = new Label();
             gradientPanel1 = new UiTools.GradientPanel();
+            customButton2 = new UiTools.CustomButton.CustomButton();
+            customButton1 = new UiTools.CustomButton.CustomButton();
             gradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,19 +90,6 @@
             label5.TabIndex = 13;
             label5.Text = "New Password";
             // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.HotTrack;
-            button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(371, 241);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 43);
-            button1.TabIndex = 34;
-            button1.Text = "Change";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // Pin2
             // 
             Pin2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
@@ -119,30 +106,17 @@
             Pin1.Size = new Size(236, 38);
             Pin1.TabIndex = 35;
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.Black;
-            label13.Location = new Point(454, 287);
-            label13.Name = "label13";
-            label13.Size = new Size(66, 31);
-            label13.TabIndex = 37;
-            label13.Text = "Back";
-            label13.Click += label13_Click;
-            // 
             // gradientPanel1
             // 
-            gradientPanel1.angle = 0F;
+            gradientPanel1.angle = 90F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton2);
+            gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label1);
             gradientPanel1.Controls.Add(label6);
             gradientPanel1.Controls.Add(label5);
-            gradientPanel1.Controls.Add(label13);
             gradientPanel1.Controls.Add(label2);
-            gradientPanel1.Controls.Add(button1);
             gradientPanel1.Controls.Add(Pin2);
             gradientPanel1.Controls.Add(Pin1);
             gradientPanel1.Dock = DockStyle.Fill;
@@ -152,6 +126,38 @@
             gradientPanel1.TabIndex = 38;
             gradientPanel1.TopColor = Color.LightSkyBlue;
             gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
+            // customButton2
+            // 
+            customButton2.Angle = 230F;
+            customButton2.BackColor = Color.Transparent;
+            customButton2.BorderRadius = 30;
+            customButton2.ButtonText = "Back";
+            customButton2.Color0 = SystemColors.HotTrack;
+            customButton2.Color1 = Color.LightSkyBlue;
+            customButton2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton2.ForeColor = Color.Black;
+            customButton2.Location = new Point(12, 272);
+            customButton2.Name = "customButton2";
+            customButton2.Size = new Size(150, 43);
+            customButton2.TabIndex = 39;
+            customButton2.Click += customButton2_Click;
+            // 
+            // customButton1
+            // 
+            customButton1.Angle = 213F;
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.ButtonText = "Change";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(370, 272);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 43);
+            customButton1.TabIndex = 38;
+            customButton1.Click += customButton1_Click;
             // 
             // ChangePin
             // 
@@ -174,10 +180,10 @@
         private Label label1;
         private Label label2;
         private Label label5;
-        private Button button1;
         private TextBox Pin2;
         private TextBox Pin1;
-        private Label label13;
         private UiTools.GradientPanel gradientPanel1;
+        private UiTools.CustomButton.CustomButton customButton2;
+        private UiTools.CustomButton.CustomButton customButton1;
     }
 }

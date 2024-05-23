@@ -22,12 +22,7 @@ namespace BurakT_ATM
             Application.Exit();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
-        }
+       
 
         //Balance
         private void button6_Click(object sender, EventArgs e)
@@ -100,6 +95,14 @@ namespace BurakT_ATM
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //Logout
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }

@@ -34,11 +34,11 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
-            label5 = new Label();
             AccNumlbl = new Label();
             label1 = new Label();
             label2 = new Label();
             gradientPanel1 = new UiTools.GradientPanel();
+            customButton1 = new UiTools.CustomButton.CustomButton();
             gradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -120,26 +120,13 @@
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(704, 413);
-            label5.Name = "label5";
-            label5.Size = new Size(91, 31);
-            label5.TabIndex = 15;
-            label5.Text = "Logout";
-            label5.Click += label5_Click;
-            // 
             // AccNumlbl
             // 
             AccNumlbl.AutoSize = true;
             AccNumlbl.BackColor = Color.Transparent;
             AccNumlbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             AccNumlbl.ForeColor = Color.Black;
-            AccNumlbl.Location = new Point(19, 413);
+            AccNumlbl.Location = new Point(492, 407);
             AccNumlbl.Name = "AccNumlbl";
             AccNumlbl.Size = new Size(194, 31);
             AccNumlbl.TabIndex = 16;
@@ -165,7 +152,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(766, 12);
+            label2.Location = new Point(768, 9);
             label2.Name = "label2";
             label2.Size = new Size(29, 31);
             label2.TabIndex = 3;
@@ -177,13 +164,13 @@
             gradientPanel1.angle = 60F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label1);
             gradientPanel1.Controls.Add(label2);
             gradientPanel1.Controls.Add(button1);
             gradientPanel1.Controls.Add(AccNumlbl);
             gradientPanel1.Controls.Add(button2);
             gradientPanel1.Controls.Add(button3);
-            gradientPanel1.Controls.Add(label5);
             gradientPanel1.Controls.Add(button4);
             gradientPanel1.Controls.Add(button6);
             gradientPanel1.Controls.Add(button5);
@@ -193,6 +180,22 @@
             gradientPanel1.Size = new Size(800, 450);
             gradientPanel1.TabIndex = 17;
             gradientPanel1.TopColor = Color.LightSkyBlue;
+            // 
+            // customButton1
+            // 
+            customButton1.Angle = 106F;
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.ButtonText = "Logout";
+            customButton1.Color0 = SystemColors.HotTrack;
+            customButton1.Color1 = Color.LightSkyBlue;
+            customButton1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
+            customButton1.ForeColor = Color.Black;
+            customButton1.Location = new Point(12, 395);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 43);
+            customButton1.TabIndex = 40;
+            customButton1.Click += customButton1_Click;
             // 
             // HOME
             // 
@@ -219,10 +222,10 @@
         private Button button4;
         private Button button5;
         private Button button6;
-        private Label label5;
         private Label AccNumlbl;
         private Label label1;
         private Label label2;
         private UiTools.GradientPanel gradientPanel1;
+        private UiTools.CustomButton.CustomButton customButton1;
     }
 }
