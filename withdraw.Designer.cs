@@ -50,6 +50,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(532, 76);
             panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // label6
             // 
@@ -139,6 +140,7 @@
             balancelbl.Size = new Size(163, 25);
             balancelbl.TabIndex = 48;
             balancelbl.Text = "Available Balance";
+            balancelbl.Click += balancelbl_Click;
             // 
             // withdraw
             // 

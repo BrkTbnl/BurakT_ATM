@@ -39,7 +39,7 @@
             button2 = new Button();
             button1 = new Button();
             label2 = new Label();
-            label3 = new Label();
+            BalanceLbl = new Label();
             label13 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -60,11 +60,12 @@
             label6.AutoSize = true;
             label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(611, 0);
+            label6.Location = new Point(599, 9);
             label6.Name = "label6";
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label1
             // 
@@ -97,6 +98,7 @@
             button6.TabIndex = 41;
             button6.Text = "500.00";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click_1;
             // 
             // button5
             // 
@@ -122,6 +124,7 @@
             button4.TabIndex = 39;
             button4.Text = "200.00";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click_1;
             // 
             // button3
             // 
@@ -147,6 +150,7 @@
             button2.TabIndex = 37;
             button2.Text = "100.00";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // button1
             // 
@@ -172,27 +176,29 @@
             label2.TabIndex = 42;
             label2.Text = "FAST CAHS";
             // 
-            // label3
+            // BalanceLbl
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(12, 371);
-            label3.Name = "label3";
-            label3.Size = new Size(200, 31);
-            label3.TabIndex = 43;
-            label3.Text = "Available Balance";
+            BalanceLbl.AutoSize = true;
+            BalanceLbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BalanceLbl.ForeColor = Color.Black;
+            BalanceLbl.Location = new Point(12, 371);
+            BalanceLbl.Name = "BalanceLbl";
+            BalanceLbl.Size = new Size(200, 31);
+            BalanceLbl.TabIndex = 43;
+            BalanceLbl.Text = "Available Balance";
+            BalanceLbl.Click += label3_Click;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(537, 371);
+            label13.Location = new Point(562, 371);
             label13.Name = "label13";
-            label13.Size = new Size(91, 31);
+            label13.Size = new Size(66, 31);
             label13.TabIndex = 44;
-            label13.Text = "Logout";
+            label13.Text = "Back";
+            label13.Click += label13_Click;
             // 
             // FASTCASH
             // 
@@ -201,7 +207,7 @@
             ClientSize = new Size(640, 432);
             ControlBox = false;
             Controls.Add(label13);
-            Controls.Add(label3);
+            Controls.Add(BalanceLbl);
             Controls.Add(label2);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -235,7 +241,7 @@
         private Button button2;
         private Button button1;
         private Label label2;
-        private Label label3;
+        private Label BalanceLbl;
         private Label label13;
     }
 }

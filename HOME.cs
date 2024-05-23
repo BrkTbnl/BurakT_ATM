@@ -47,9 +47,12 @@ namespace BurakT_ATM
         {
 
         }
+        //fast cash button
         private void button3_Click(object sender, EventArgs e)
         {
-
+            FASTCASH fc = new FASTCASH();
+            fc.Show();
+            this.Hide();
         }
         //withdraw button
         private void button2_Click(object sender, EventArgs e)

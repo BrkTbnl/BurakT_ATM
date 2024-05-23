@@ -1,4 +1,6 @@
 ﻿
+using BurakT_ATM.UiTools;
+
 namespace BurakT_ATM
 {
     partial class account
@@ -30,7 +32,6 @@ namespace BurakT_ATM
         private void InitializeComponent()
         {
             label1 = new Label();
-            panel1 = new Panel();
             label2 = new Label();
             label5 = new Label();
             label3 = new Label();
@@ -50,41 +51,31 @@ namespace BurakT_ATM
             educationcb = new ComboBox();
             dobdate = new DateTimePicker();
             button1 = new Button();
-            panel2 = new Panel();
             label13 = new Label();
             occupationtb = new TextBox();
-            panel1.SuspendLayout();
+            gradientPanel1 = new GradientPanel();
+            gradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(219, 25);
+            label1.Location = new Point(195, 24);
             label1.Name = "label1";
             label1.Size = new Size(239, 31);
             label1.TabIndex = 2;
             label1.Text = "X Bank ATM Systems";
             // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(640, 78);
-            panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
-            // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(611, 0);
+            label2.Location = new Point(600, 9);
             label2.Name = "label2";
             label2.Size = new Size(29, 31);
             label2.TabIndex = 3;
@@ -94,9 +85,10 @@ namespace BurakT_ATM
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(0, 102);
+            label5.Location = new Point(1, 108);
             label5.Name = "label5";
             label5.Size = new Size(92, 25);
             label5.TabIndex = 10;
@@ -106,9 +98,10 @@ namespace BurakT_ATM
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(0, 147);
+            label3.Location = new Point(1, 153);
             label3.Name = "label3";
             label3.Size = new Size(72, 25);
             label3.TabIndex = 11;
@@ -117,9 +110,10 @@ namespace BurakT_ATM
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
             label4.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(0, 187);
+            label4.Location = new Point(1, 193);
             label4.Name = "label4";
             label4.Size = new Size(105, 25);
             label4.TabIndex = 12;
@@ -129,9 +123,10 @@ namespace BurakT_ATM
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(0, 237);
+            label6.Location = new Point(1, 243);
             label6.Name = "label6";
             label6.Size = new Size(98, 25);
             label6.TabIndex = 13;
@@ -140,9 +135,10 @@ namespace BurakT_ATM
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(278, 237);
+            label7.Location = new Point(279, 243);
             label7.Name = "label7";
             label7.Size = new Size(79, 25);
             label7.TabIndex = 14;
@@ -151,9 +147,10 @@ namespace BurakT_ATM
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(278, 147);
+            label8.Location = new Point(279, 153);
             label8.Name = "label8";
             label8.Size = new Size(117, 25);
             label8.TabIndex = 15;
@@ -162,9 +159,10 @@ namespace BurakT_ATM
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
             label9.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(278, 187);
+            label9.Location = new Point(279, 193);
             label9.Name = "label9";
             label9.Size = new Size(131, 25);
             label9.TabIndex = 16;
@@ -174,9 +172,10 @@ namespace BurakT_ATM
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
             label10.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(278, 288);
+            label10.Location = new Point(279, 294);
             label10.Name = "label10";
             label10.Size = new Size(74, 25);
             label10.TabIndex = 17;
@@ -185,9 +184,10 @@ namespace BurakT_ATM
             // label12
             // 
             label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
             label12.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label12.ForeColor = Color.Black;
-            label12.Location = new Point(278, 99);
+            label12.Location = new Point(279, 105);
             label12.Name = "label12";
             label12.Size = new Size(108, 25);
             label12.TabIndex = 19;
@@ -196,7 +196,7 @@ namespace BurakT_ATM
             // AccNametb
             // 
             AccNametb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            AccNametb.Location = new Point(126, 138);
+            AccNametb.Location = new Point(127, 144);
             AccNametb.Name = "AccNametb";
             AccNametb.Size = new Size(146, 31);
             AccNametb.TabIndex = 21;
@@ -204,7 +204,7 @@ namespace BurakT_ATM
             // AccNumTb
             // 
             AccNumTb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            AccNumTb.Location = new Point(126, 96);
+            AccNumTb.Location = new Point(127, 102);
             AccNumTb.Name = "AccNumTb";
             AccNumTb.Size = new Size(146, 31);
             AccNumTb.TabIndex = 20;
@@ -213,7 +213,7 @@ namespace BurakT_ATM
             // Addresstb
             // 
             Addresstb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            Addresstb.Location = new Point(126, 231);
+            Addresstb.Location = new Point(127, 237);
             Addresstb.Multiline = true;
             Addresstb.Name = "Addresstb";
             Addresstb.Size = new Size(146, 98);
@@ -222,7 +222,7 @@ namespace BurakT_ATM
             // FanameTb
             // 
             FanameTb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            FanameTb.Location = new Point(126, 181);
+            FanameTb.Location = new Point(127, 187);
             FanameTb.Name = "FanameTb";
             FanameTb.Size = new Size(146, 31);
             FanameTb.TabIndex = 22;
@@ -230,7 +230,7 @@ namespace BurakT_ATM
             // pintb
             // 
             pintb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            pintb.Location = new Point(438, 93);
+            pintb.Location = new Point(439, 99);
             pintb.Name = "pintb";
             pintb.Size = new Size(163, 31);
             pintb.TabIndex = 24;
@@ -238,7 +238,7 @@ namespace BurakT_ATM
             // PhoneTb
             // 
             PhoneTb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            PhoneTb.Location = new Point(438, 231);
+            PhoneTb.Location = new Point(439, 237);
             PhoneTb.Name = "PhoneTb";
             PhoneTb.Size = new Size(146, 31);
             PhoneTb.TabIndex = 28;
@@ -248,7 +248,7 @@ namespace BurakT_ATM
             educationcb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             educationcb.FormattingEnabled = true;
             educationcb.Items.AddRange(new object[] { "Non Graduate", "Under Graduate", "Post Graduate" });
-            educationcb.Location = new Point(438, 139);
+            educationcb.Location = new Point(439, 145);
             educationcb.Name = "educationcb";
             educationcb.Size = new Size(163, 33);
             educationcb.TabIndex = 30;
@@ -257,7 +257,7 @@ namespace BurakT_ATM
             // 
             dobdate.CalendarFont = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             dobdate.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            dobdate.Location = new Point(436, 283);
+            dobdate.Location = new Point(437, 289);
             dobdate.Name = "dobdate";
             dobdate.Size = new Size(165, 31);
             dobdate.TabIndex = 32;
@@ -267,7 +267,7 @@ namespace BurakT_ATM
             button1.BackColor = SystemColors.HotTrack;
             button1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(479, 344);
+            button1.Location = new Point(480, 350);
             button1.Name = "button1";
             button1.Size = new Size(149, 43);
             button1.TabIndex = 33;
@@ -275,21 +275,13 @@ namespace BurakT_ATM
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.HotTrack;
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 416);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(640, 16);
-            panel2.TabIndex = 34;
-            // 
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(544, 388);
+            label13.Location = new Point(544, 398);
             label13.Name = "label13";
             label13.Size = new Size(84, 25);
             label13.TabIndex = 35;
@@ -299,10 +291,44 @@ namespace BurakT_ATM
             // occupationtb
             // 
             occupationtb.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold);
-            occupationtb.Location = new Point(438, 181);
+            occupationtb.Location = new Point(439, 187);
             occupationtb.Name = "occupationtb";
             occupationtb.Size = new Size(163, 31);
             occupationtb.TabIndex = 36;
+            // 
+            // gradientPanel1
+            // 
+            gradientPanel1.angle = 60F;
+            gradientPanel1.BackColor = SystemColors.HotTrack;
+            gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(label5);
+            gradientPanel1.Controls.Add(label2);
+            gradientPanel1.Controls.Add(label3);
+            gradientPanel1.Controls.Add(occupationtb);
+            gradientPanel1.Controls.Add(label4);
+            gradientPanel1.Controls.Add(label1);
+            gradientPanel1.Controls.Add(label6);
+            gradientPanel1.Controls.Add(label13);
+            gradientPanel1.Controls.Add(label7);
+            gradientPanel1.Controls.Add(button1);
+            gradientPanel1.Controls.Add(label8);
+            gradientPanel1.Controls.Add(dobdate);
+            gradientPanel1.Controls.Add(label9);
+            gradientPanel1.Controls.Add(educationcb);
+            gradientPanel1.Controls.Add(label10);
+            gradientPanel1.Controls.Add(PhoneTb);
+            gradientPanel1.Controls.Add(label12);
+            gradientPanel1.Controls.Add(pintb);
+            gradientPanel1.Controls.Add(AccNumTb);
+            gradientPanel1.Controls.Add(Addresstb);
+            gradientPanel1.Controls.Add(AccNametb);
+            gradientPanel1.Controls.Add(FanameTb);
+            gradientPanel1.Dock = DockStyle.Fill;
+            gradientPanel1.Location = new Point(0, 0);
+            gradientPanel1.Name = "gradientPanel1";
+            gradientPanel1.Size = new Size(640, 432);
+            gradientPanel1.TabIndex = 37;
+            gradientPanel1.TopColor = Color.LightSkyBlue;
             // 
             // account
             // 
@@ -310,38 +336,16 @@ namespace BurakT_ATM
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 432);
             ControlBox = false;
-            Controls.Add(occupationtb);
-            Controls.Add(label13);
-            Controls.Add(panel2);
-            Controls.Add(button1);
-            Controls.Add(dobdate);
-            Controls.Add(educationcb);
-            Controls.Add(PhoneTb);
-            Controls.Add(pintb);
-            Controls.Add(Addresstb);
-            Controls.Add(FanameTb);
-            Controls.Add(AccNametb);
-            Controls.Add(AccNumTb);
-            Controls.Add(label12);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label5);
-            Controls.Add(panel1);
+            Controls.Add(gradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "account";
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "account";
             Load += account_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            gradientPanel1.ResumeLayout(false);
+            gradientPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         private void Label5_Click(object sender, EventArgs e)
@@ -352,7 +356,6 @@ namespace BurakT_ATM
         #endregion
 
         private Label label1;
-        private Panel panel1;
         private Label label2;
         private Label label5;
         private Label label3;
@@ -372,8 +375,8 @@ namespace BurakT_ATM
         private ComboBox educationcb;
         private DateTimePicker dobdate;
         private Button button1;
-        private Panel panel2;
         private Label label13;
         private TextBox occupationtb;
+        private GradientPanel gradientPanel1;
     }
 }

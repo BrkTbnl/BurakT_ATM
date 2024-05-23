@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,10 +21,41 @@ namespace BurakT_ATM
             InitializeComponent();
         }
 
+
+
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         String Acc = Login.AccNumber;
 
         int oldbalance, newbalance;
+        string TrType = "Deposit";
+
+
+        private void addTransaction(string accNum, string trType, int amount)
+        {
+            string query = "INSERT INTO TransactionTbl (AccNum, Type, Amount, TDate) " +
+                           "VALUES (@AccNum, @Type, @Amount, @TDate)";
+
+            using (SqlConnection connection = new SqlConnection(Con.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@AccNum", accNum);
+                cmd.Parameters.AddWithValue("@Type", trType);
+                cmd.Parameters.AddWithValue("@Amount", amount);
+                cmd.Parameters.AddWithValue("@TDate", DateTime.Now.ToString("dd-MM-yy HH:mm:ss"));
+
+                try
+                {
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+
 
         // deposit function
         private void button1_Click(object sender, EventArgs e)
@@ -34,24 +68,27 @@ namespace BurakT_ATM
             else
             {
                 newbalance = oldbalance + depositAmount;
-                try
+                string query = "UPDATE AccountTbl SET Balance = @NewBalance WHERE AccNum = @AccNum";
+
+                using (SqlConnection connection = new SqlConnection(Con.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
-                    Con.Open();
-                    string query = "update AccountTbl set Balance = @NewBalance where AccNum = @AccNum";
-                    SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.Parameters.AddWithValue("@NewBalance", newbalance);
                     cmd.Parameters.AddWithValue("@AccNum", Acc);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Deposit Successful!");
-                   
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show("An Error Occured:\n "+Ex.Message);
-                }
-                finally
-                {
-                    Con.Close();
+
+                    try
+                    {
+                        connection.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Deposit Successful!");
+
+                        // Add transaction after successful deposit
+                        addTransaction(Acc, "Deposit", depositAmount);
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show("An Error Occurred:\n " + Ex.Message);
+                    }
                 }
 
                 HOME hOME = new HOME();

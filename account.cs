@@ -115,5 +115,10 @@ namespace BurakT_ATM
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

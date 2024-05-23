@@ -57,6 +57,34 @@ namespace BurakT_ATM
         {
             getBalance();
         }
+        string trType = "Withdraw";
+
+        private void addTransaction(string accNum, string trType, int amount)
+        {
+
+            string query = "INSERT INTO TransactionTbl (AccNum, Type, Amount, TDate) " +
+                           "VALUES (@AccNum, @Type, @Amount, @TDate)";
+
+
+            using (SqlConnection connection = new SqlConnection(Con.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@AccNum", accNum);
+                cmd.Parameters.AddWithValue("@Type", trType);
+                cmd.Parameters.AddWithValue("@Amount", amount);
+                cmd.Parameters.AddWithValue("@TDate", DateTime.Now.ToString("dd-MM-yy HH:mm:ss"));
+
+                try
+                {
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
 
         // Withdraw button
         private void button1_Click(object sender, EventArgs e)
@@ -93,6 +121,7 @@ namespace BurakT_ATM
                 finally
                 {
                     Con.Close();
+                    addTransaction(Acc, trType, withdrawAmount);
                 }
 
                 HOME hOME = new HOME();
@@ -111,6 +140,16 @@ namespace BurakT_ATM
         private void label6_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void balancelbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

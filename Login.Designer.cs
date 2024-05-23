@@ -1,4 +1,6 @@
-﻿namespace BurakT_ATM
+﻿using BurakT_ATM.UiTools;
+
+namespace BurakT_ATM
 {
     partial class Login
     {
@@ -45,9 +47,9 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.White;
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(635, 241);
+            pictureBox1.Location = new Point(644, 241);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(131, 106);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
