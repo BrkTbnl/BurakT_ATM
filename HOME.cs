@@ -78,7 +78,7 @@ namespace BurakT_ATM
 
         {
             AccNumlbl.Text = "Account Number: " + Login.AccNumber;
-            AccNumber = Login.AccNumber;
+            
 
         }
 

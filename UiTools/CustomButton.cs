@@ -1,34 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Drawing2D;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
 namespace BurakT_ATM.UiTools.CustomButton
 {
     [DefaultEvent("Click")]
-
     public partial class CustomButton : UserControl
     {
-        Color cl0 = Color.Blue, cl1 = Color.Orange;
-        int wh = 20;
-        float ang = 45;
-        Timer t = new Timer();
-        private string txt = "Im custom button";
-        private Color originalColor; // Orjinal arka plan rengini saklamak için
+        private Color cl0 = Color.Blue, cl1 = Color.Orange;
+        private int wh = 20;
+        private float ang = 45;
+        private Timer t = new System.Windows.Forms.Timer();
+        private string txt = "I'm custom button";
+        private Color originalColor; // Original background color
+        private bool isMouseOver = false;
+        private Color borderColor = Color.White;
 
         public CustomButton()
         {
             DoubleBuffered = true;
             t.Interval = 60;
-            t.Start();
             t.Tick += (s, e) => { Angle = Angle % 360 + 1; };
+            t.Start();
             ForeColor = Color.White;
 
-            // Tıklandığında olayı dinlemek için EventHandler ekleyelim
-            this.Click += CustomButton_Click;
+            // Event handlers for mouse enter and leave
+            this.MouseEnter += CustomButtonMouseEnter;
+            this.MouseLeave += CustomButtonMouseLeave;
         }
 
         public float Angle
@@ -37,6 +38,7 @@ namespace BurakT_ATM.UiTools.CustomButton
             set { ang = value; Invalidate(); }
         }
 
+        //curvy edge 
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
@@ -46,9 +48,19 @@ namespace BurakT_ATM.UiTools.CustomButton
             gp.AddArc(new Rectangle(Width - wh, 0, wh, wh), -90, 90);
             gp.AddArc(new Rectangle(Width - wh, Height - wh, wh, wh), 0, 90);
             gp.AddArc(new Rectangle(0, Height - wh, wh, wh), 90, 90);
+            gp.CloseFigure();
 
             e.Graphics.FillPath(new LinearGradientBrush(ClientRectangle, cl0, cl1, ang), gp);
             e.Graphics.DrawString(txt, Font, new SolidBrush(ForeColor), ClientRectangle, new StringFormat() { LineAlignment = StringAlignment.Center, Alignment = StringAlignment.Center });
+
+            //mouse action with button
+            if (isMouseOver)
+            {
+                using (Pen borderPen = new Pen(borderColor, 2))
+                {
+                    e.Graphics.DrawPath(borderPen, gp);
+                }
+            }
             base.OnPaint(e);
         }
 
@@ -63,6 +75,7 @@ namespace BurakT_ATM.UiTools.CustomButton
             get { return cl0; }
             set { cl0 = value; Invalidate(); }
         }
+
         public Color Color1
         {
             get { return cl1; }
@@ -76,21 +89,16 @@ namespace BurakT_ATM.UiTools.CustomButton
             set { txt = value; Invalidate(); }
         }
 
-        private void CustomButton_Click(object sender, EventArgs e)
+        private void CustomButtonMouseEnter(object? sender, EventArgs e)
         {
-            // Buton tıklandığında arka plan rengini geçici olarak değiştirelim
-            originalColor = BackColor; // Orijinal rengi sakla
-            BackColor = Color.LightGray; // Geçici olarak arka plan rengini değiştir
-            Refresh(); // Yenile
-            // 100 ms sonra arka plan rengini eski haline getir
-            Timer resetColorTimer = new Timer();
-            resetColorTimer.Interval = 100;
-            resetColorTimer.Tick += (s, evt) =>
-            {
-                BackColor = originalColor;
-                resetColorTimer.Stop(); // Timer'ı durdur
-            };
-            resetColorTimer.Start();
+            isMouseOver = true;
+            Invalidate();
+        }
+
+        private void CustomButtonMouseLeave(object? sender, EventArgs e)
+        {
+            isMouseOver = false;
+            Invalidate();
         }
     }
 }

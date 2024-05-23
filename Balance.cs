@@ -15,15 +15,37 @@ namespace BurakT_ATM
     {
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\btaba\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
-
+        String Acc = Login.AccNumber;
+        int bal = 0;    
         private void getBalance()
         {
-            Con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select Balance from AccountTbl where AccNum='" + AccNumberlbl.Text + "'", Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            Balancelbl.Text = "PLN " + dt.Rows[0][0].ToString();
-            Con.Close();
+            try
+            {
+                Con.Open();
+                string query = "select Balance from AccountTbl where AccNum=@AccNum";
+                SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+                sda.SelectCommand.Parameters.AddWithValue("@AccNum", Acc);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    Balancelbl.Text = "Balance: PLN " + dt.Rows[0]["Balance"].ToString();
+                    bal = Convert.ToInt32(dt.Rows[0]["Balance"].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Account not found!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while fetching the balance: " + ex.Message);
+            }
+            finally
+            {
+                Con.Close();
+            }
         }
 
         public Balance()
@@ -60,7 +82,7 @@ namespace BurakT_ATM
         //For balance page account number
         private void Balance_Load(object sender, EventArgs e)
         {
-            AccNumberlbl.Text = HOME.AccNumber;
+            AccNumberlbl.Text = Login.AccNumber;
             getBalance();
         }
 

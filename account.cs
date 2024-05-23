@@ -67,7 +67,7 @@ namespace BurakT_ATM
         //Account submit button
         private void customButton1_Click(object sender, EventArgs e)
         {
-            int bal = 0;
+            
             if (AccNametb.Text == "" || AccNumTb.Text == "" || FanameTb.Text == "" || PhoneTb.Text == "" || Addresstb.Text == "" || occupationtb.Text == "" || pintb.Text == "")
             {
                 MessageBox.Show("Missing Information");

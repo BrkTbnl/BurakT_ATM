@@ -98,9 +98,9 @@
             Balancelbl.ForeColor = Color.Black;
             Balancelbl.Location = new Point(268, 193);
             Balancelbl.Name = "Balancelbl";
-            Balancelbl.Size = new Size(158, 31);
+            Balancelbl.Size = new Size(98, 31);
             Balancelbl.TabIndex = 38;
-            Balancelbl.Text = "Balance In Rs";
+            Balancelbl.Text = "Balance";
             Balancelbl.Click += label3_Click;
             // 
             // AccNumberlbl
@@ -139,7 +139,7 @@
             // 
             // customButton1
             // 
-            customButton1.Angle = 293F;
+            customButton1.Angle = 243F;
             customButton1.BackColor = Color.Transparent;
             customButton1.BorderRadius = 30;
             customButton1.ButtonText = "Back";
