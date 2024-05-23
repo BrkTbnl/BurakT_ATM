@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -37,26 +36,17 @@
             Pin2 = new TextBox();
             Pin1 = new TextBox();
             label13 = new Label();
-            panel1.SuspendLayout();
+            gradientPanel1 = new UiTools.GradientPanel();
+            gradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(532, 76);
-            panel1.TabIndex = 2;
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(503, 0);
+            label6.Location = new Point(491, 9);
             label6.Name = "label6";
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
@@ -66,9 +56,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(155, 21);
+            label1.Location = new Point(155, 31);
             label1.Name = "label1";
             label1.Size = new Size(239, 31);
             label1.TabIndex = 1;
@@ -77,9 +68,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(31, 177);
+            label2.Location = new Point(27, 197);
             label2.Name = "label2";
             label2.Size = new Size(211, 31);
             label2.TabIndex = 14;
@@ -89,9 +81,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(31, 116);
+            label5.Location = new Point(27, 121);
             label5.Name = "label5";
             label5.Size = new Size(170, 31);
             label5.TabIndex = 13;
@@ -113,7 +106,7 @@
             // Pin2
             // 
             Pin2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            Pin2.Location = new Point(273, 170);
+            Pin2.Location = new Point(256, 190);
             Pin2.Name = "Pin2";
             Pin2.Size = new Size(236, 38);
             Pin2.TabIndex = 36;
@@ -121,7 +114,7 @@
             // Pin1
             // 
             Pin1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            Pin1.Location = new Point(273, 109);
+            Pin1.Location = new Point(256, 114);
             Pin1.Name = "Pin1";
             Pin1.Size = new Size(236, 38);
             Pin1.TabIndex = 35;
@@ -129,6 +122,7 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
             label13.Location = new Point(454, 287);
@@ -138,32 +132,44 @@
             label13.Text = "Back";
             label13.Click += label13_Click;
             // 
+            // gradientPanel1
+            // 
+            gradientPanel1.angle = 0F;
+            gradientPanel1.BackColor = SystemColors.HotTrack;
+            gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(label1);
+            gradientPanel1.Controls.Add(label6);
+            gradientPanel1.Controls.Add(label5);
+            gradientPanel1.Controls.Add(label13);
+            gradientPanel1.Controls.Add(label2);
+            gradientPanel1.Controls.Add(button1);
+            gradientPanel1.Controls.Add(Pin2);
+            gradientPanel1.Controls.Add(Pin1);
+            gradientPanel1.Dock = DockStyle.Fill;
+            gradientPanel1.Location = new Point(0, 0);
+            gradientPanel1.Name = "gradientPanel1";
+            gradientPanel1.Size = new Size(532, 327);
+            gradientPanel1.TabIndex = 38;
+            gradientPanel1.TopColor = Color.LightSkyBlue;
+            gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
             // ChangePin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 327);
             ControlBox = false;
-            Controls.Add(label13);
-            Controls.Add(Pin2);
-            Controls.Add(Pin1);
-            Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(label5);
-            Controls.Add(panel1);
+            Controls.Add(gradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ChangePin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangePin";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            gradientPanel1.ResumeLayout(false);
+            gradientPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
         private Label label6;
         private Label label1;
         private Label label2;
@@ -172,5 +178,6 @@
         private TextBox Pin2;
         private TextBox Pin1;
         private Label label13;
+        private UiTools.GradientPanel gradientPanel1;
     }
 }

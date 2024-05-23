@@ -137,6 +137,11 @@ namespace BurakT_ATM
         {
             getBalance();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

@@ -112,5 +112,11 @@ namespace BurakT_ATM
         {
             Application.Exit();
         }
+
+       
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("its working");
+        }
     }
 }

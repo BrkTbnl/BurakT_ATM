@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
-            panel2 = new Panel();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
@@ -41,23 +39,14 @@
             label2 = new Label();
             BalanceLbl = new Label();
             label13 = new Label();
-            panel1.SuspendLayout();
+            gradientPanel1 = new UiTools.GradientPanel();
+            gradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(640, 76);
-            panel1.TabIndex = 3;
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
             label6.Location = new Point(599, 9);
@@ -70,29 +59,21 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(190, 19);
+            label1.Location = new Point(175, 25);
             label1.Name = "label1";
             label1.Size = new Size(293, 31);
             label1.TabIndex = 1;
             label1.Text = "ATM X Bank ATM Systems";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.HotTrack;
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 416);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(640, 16);
-            panel2.TabIndex = 35;
             // 
             // button6
             // 
             button6.BackColor = SystemColors.HotTrack;
             button6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(419, 283);
+            button6.Location = new Point(416, 282);
             button6.Name = "button6";
             button6.Size = new Size(169, 43);
             button6.TabIndex = 41;
@@ -105,7 +86,7 @@
             button5.BackColor = SystemColors.HotTrack;
             button5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(53, 283);
+            button5.Location = new Point(50, 282);
             button5.Name = "button5";
             button5.Size = new Size(176, 43);
             button5.TabIndex = 40;
@@ -118,7 +99,7 @@
             button4.BackColor = SystemColors.HotTrack;
             button4.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(419, 216);
+            button4.Location = new Point(416, 215);
             button4.Name = "button4";
             button4.Size = new Size(169, 43);
             button4.TabIndex = 39;
@@ -131,7 +112,7 @@
             button3.BackColor = SystemColors.HotTrack;
             button3.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(53, 216);
+            button3.Location = new Point(50, 215);
             button3.Name = "button3";
             button3.Size = new Size(176, 43);
             button3.TabIndex = 38;
@@ -144,7 +125,7 @@
             button2.BackColor = SystemColors.HotTrack;
             button2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(419, 151);
+            button2.Location = new Point(416, 150);
             button2.Name = "button2";
             button2.Size = new Size(169, 43);
             button2.TabIndex = 37;
@@ -157,7 +138,7 @@
             button1.BackColor = SystemColors.HotTrack;
             button1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(53, 151);
+            button1.Location = new Point(50, 150);
             button1.Name = "button1";
             button1.Size = new Size(176, 43);
             button1.TabIndex = 36;
@@ -168,20 +149,22 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(259, 97);
+            label2.Location = new Point(251, 74);
             label2.Name = "label2";
             label2.Size = new Size(142, 31);
             label2.TabIndex = 42;
-            label2.Text = "FAST CAHS";
+            label2.Text = "FAST CASH";
             // 
             // BalanceLbl
             // 
             BalanceLbl.AutoSize = true;
+            BalanceLbl.BackColor = Color.Transparent;
             BalanceLbl.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BalanceLbl.ForeColor = Color.Black;
-            BalanceLbl.Location = new Point(12, 371);
+            BalanceLbl.Location = new Point(12, 392);
             BalanceLbl.Name = "BalanceLbl";
             BalanceLbl.Size = new Size(200, 31);
             BalanceLbl.TabIndex = 43;
@@ -191,14 +174,38 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(562, 371);
+            label13.Location = new Point(562, 392);
             label13.Name = "label13";
             label13.Size = new Size(66, 31);
             label13.TabIndex = 44;
             label13.Text = "Back";
             label13.Click += label13_Click;
+            // 
+            // gradientPanel1
+            // 
+            gradientPanel1.angle = 60F;
+            gradientPanel1.BackColor = SystemColors.HotTrack;
+            gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(label1);
+            gradientPanel1.Controls.Add(label6);
+            gradientPanel1.Controls.Add(button1);
+            gradientPanel1.Controls.Add(label13);
+            gradientPanel1.Controls.Add(button2);
+            gradientPanel1.Controls.Add(button3);
+            gradientPanel1.Controls.Add(BalanceLbl);
+            gradientPanel1.Controls.Add(button4);
+            gradientPanel1.Controls.Add(label2);
+            gradientPanel1.Controls.Add(button5);
+            gradientPanel1.Controls.Add(button6);
+            gradientPanel1.Dock = DockStyle.Fill;
+            gradientPanel1.Location = new Point(0, 0);
+            gradientPanel1.Name = "gradientPanel1";
+            gradientPanel1.Size = new Size(640, 432);
+            gradientPanel1.TabIndex = 45;
+            gradientPanel1.TopColor = Color.LightSkyBlue;
             // 
             // FASTCASH
             // 
@@ -206,34 +213,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 432);
             ControlBox = false;
-            Controls.Add(label13);
-            Controls.Add(BalanceLbl);
-            Controls.Add(label2);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(gradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FASTCASH";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FASTCASH";
             Load += FASTCASH_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            gradientPanel1.ResumeLayout(false);
+            gradientPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
         private Label label6;
         private Label label1;
-        private Panel panel2;
         private Button button6;
         private Button button5;
         private Button button4;
@@ -243,5 +236,6 @@
         private Label label2;
         private Label BalanceLbl;
         private Label label13;
+        private UiTools.GradientPanel gradientPanel1;
     }
 }

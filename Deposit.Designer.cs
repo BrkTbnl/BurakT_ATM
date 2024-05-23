@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
             label13 = new Label();
@@ -36,26 +35,16 @@
             button1 = new Button();
             label5 = new Label();
             label2 = new Label();
-            panel1.SuspendLayout();
+            gradientPanel1 = new UiTools.GradientPanel();
+            gradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(532, 76);
-            panel1.TabIndex = 2;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(503, 0);
+            label6.Location = new Point(503, 92);
             label6.Name = "label6";
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
@@ -65,9 +54,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(152, 19);
+            label1.Location = new Point(164, 9);
             label1.Name = "label1";
             label1.Size = new Size(239, 31);
             label1.TabIndex = 1;
@@ -76,6 +66,7 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
             label13.Location = new Point(454, 287);
@@ -88,7 +79,7 @@
             // DepoAmtTb
             // 
             DepoAmtTb.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold);
-            DepoAmtTb.Location = new Point(171, 162);
+            DepoAmtTb.Location = new Point(182, 143);
             DepoAmtTb.Name = "DepoAmtTb";
             DepoAmtTb.Size = new Size(236, 38);
             DepoAmtTb.TabIndex = 40;
@@ -109,9 +100,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(28, 165);
+            label5.Location = new Point(32, 150);
             label5.Name = "label5";
             label5.Size = new Size(106, 31);
             label5.TabIndex = 38;
@@ -120,13 +112,32 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(222, 79);
+            label2.Location = new Point(230, 59);
             label2.Name = "label2";
             label2.Size = new Size(86, 25);
             label2.TabIndex = 42;
             label2.Text = "DEPOSIT";
+            // 
+            // gradientPanel1
+            // 
+            gradientPanel1.angle = 60F;
+            gradientPanel1.BackColor = SystemColors.HotTrack;
+            gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(label2);
+            gradientPanel1.Controls.Add(label5);
+            gradientPanel1.Controls.Add(button1);
+            gradientPanel1.Controls.Add(label1);
+            gradientPanel1.Controls.Add(DepoAmtTb);
+            gradientPanel1.Controls.Add(label13);
+            gradientPanel1.Dock = DockStyle.Fill;
+            gradientPanel1.Location = new Point(0, 0);
+            gradientPanel1.Name = "gradientPanel1";
+            gradientPanel1.Size = new Size(532, 327);
+            gradientPanel1.TabIndex = 43;
+            gradientPanel1.TopColor = Color.LightSkyBlue;
             // 
             // Deposit
             // 
@@ -134,26 +145,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 327);
             ControlBox = false;
-            Controls.Add(label2);
-            Controls.Add(label13);
-            Controls.Add(DepoAmtTb);
-            Controls.Add(button1);
-            Controls.Add(label5);
-            Controls.Add(panel1);
+            Controls.Add(gradientPanel1);
+            Controls.Add(label6);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Deposit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Deposit";
             Load += Deposit_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            gradientPanel1.ResumeLayout(false);
+            gradientPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
         private Label label6;
         private Label label1;
         private Label label13;
@@ -161,5 +166,6 @@
         private Button button1;
         private Label label5;
         private Label label2;
+        private UiTools.GradientPanel gradientPanel1;
     }
 }

@@ -28,44 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
             label2 = new Label();
             label13 = new Label();
-            dataGridView1 = new DataGridView();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            MiniStatementDGV = new DataGridView();
+            gradientPanel1 = new UiTools.GradientPanel();
+            ((System.ComponentModel.ISupportInitialize)MiniStatementDGV).BeginInit();
+            gradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(640, 76);
-            panel1.TabIndex = 4;
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(611, 0);
+            label6.Location = new Point(599, 9);
             label6.Name = "label6";
             label6.Size = new Size(29, 31);
             label6.TabIndex = 10;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(222, 23);
+            label1.Location = new Point(217, 177);
             label1.Name = "label1";
             label1.Size = new Size(239, 31);
             label1.TabIndex = 1;
@@ -74,9 +65,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(231, 79);
+            label2.Location = new Point(232, 21);
             label2.Name = "label2";
             label2.Size = new Size(203, 31);
             label2.TabIndex = 43;
@@ -85,22 +77,43 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(537, 392);
+            label13.Location = new Point(562, 388);
             label13.Name = "label13";
-            label13.Size = new Size(91, 31);
+            label13.Size = new Size(66, 31);
             label13.TabIndex = 45;
-            label13.Text = "Logout";
+            label13.Text = "Back";
+            label13.Click += label13_Click;
             // 
-            // dataGridView1
+            // MiniStatementDGV
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(2, 124);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(638, 265);
-            dataGridView1.TabIndex = 46;
+            MiniStatementDGV.BackgroundColor = Color.White;
+            MiniStatementDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            MiniStatementDGV.Location = new Point(12, 92);
+            MiniStatementDGV.Name = "MiniStatementDGV";
+            MiniStatementDGV.Size = new Size(616, 265);
+            MiniStatementDGV.TabIndex = 46;
+            MiniStatementDGV.CellContentClick += MiniStatementDGV_CellContentClick;
+            // 
+            // gradientPanel1
+            // 
+            gradientPanel1.angle = 60F;
+            gradientPanel1.BackColor = SystemColors.HotTrack;
+            gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(label2);
+            gradientPanel1.Controls.Add(label6);
+            gradientPanel1.Controls.Add(label13);
+            gradientPanel1.Controls.Add(MiniStatementDGV);
+            gradientPanel1.Controls.Add(label1);
+            gradientPanel1.Dock = DockStyle.Fill;
+            gradientPanel1.Location = new Point(0, 0);
+            gradientPanel1.Name = "gradientPanel1";
+            gradientPanel1.Size = new Size(640, 432);
+            gradientPanel1.TabIndex = 47;
+            gradientPanel1.TopColor = Color.LightSkyBlue;
+            gradientPanel1.Paint += gradientPanel1_Paint;
             // 
             // ministatement
             // 
@@ -108,28 +121,24 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 432);
             ControlBox = false;
-            Controls.Add(dataGridView1);
-            Controls.Add(label13);
-            Controls.Add(label2);
-            Controls.Add(panel1);
+            Controls.Add(gradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ministatement";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ministatement";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += ministatement_Load;
+            ((System.ComponentModel.ISupportInitialize)MiniStatementDGV).EndInit();
+            gradientPanel1.ResumeLayout(false);
+            gradientPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
         private Label label6;
         private Label label1;
         private Label label2;
         private Label label13;
-        private DataGridView dataGridView1;
+        private DataGridView MiniStatementDGV;
+        private UiTools.GradientPanel gradientPanel1;
     }
 }

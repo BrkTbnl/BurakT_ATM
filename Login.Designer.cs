@@ -40,6 +40,7 @@ namespace BurakT_ATM
             label2 = new Label();
             label5 = new Label();
             gradientPanel1 = new GradientPanel();
+            customButton1 = new UiTools.CustomButton.CustomButton();
             label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             gradientPanel1.SuspendLayout();
@@ -140,6 +141,7 @@ namespace BurakT_ATM
             gradientPanel1.angle = 90F;
             gradientPanel1.BackColor = SystemColors.HotTrack;
             gradientPanel1.BottomColor = Color.Empty;
+            gradientPanel1.Controls.Add(customButton1);
             gradientPanel1.Controls.Add(label6);
             gradientPanel1.Controls.Add(label2);
             gradientPanel1.Controls.Add(label5);
@@ -154,8 +156,22 @@ namespace BurakT_ATM
             gradientPanel1.Name = "gradientPanel1";
             gradientPanel1.Size = new Size(800, 450);
             gradientPanel1.TabIndex = 10;
+            gradientPanel1.Tag = "Login";
             gradientPanel1.TopColor = Color.LightSkyBlue;
             gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
+            // customButton1
+            // 
+            customButton1.BackColor = Color.Transparent;
+            customButton1.BorderRadius = 30;
+            customButton1.Color0 = Color.Blue;
+            customButton1.Color1 = Color.Orange;
+            customButton1.Location = new Point(355, 363);
+            customButton1.Name = "customButton1";
+            customButton1.Size = new Size(150, 67);
+            customButton1.TabIndex = 12;
+
+            customButton1.Click += customButton1_Click;
             // 
             // label6
             // 
@@ -199,5 +215,6 @@ namespace BurakT_ATM
         private Label label5;
         private GradientPanel gradientPanel1;
         private Label label6;
+        private UiTools.CustomButton.CustomButton customButton1;
     }
 }

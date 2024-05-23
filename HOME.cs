@@ -43,9 +43,12 @@ namespace BurakT_ATM
             pin.Show();
             this.Hide();
         }
+        //ministatement
         private void button4_Click(object sender, EventArgs e)
         {
-
+            ministatement ms = new ministatement();
+            ms.Show();
+            this.Hide();
         }
         //fast cash button
         private void button3_Click(object sender, EventArgs e)
@@ -77,7 +80,7 @@ namespace BurakT_ATM
         // Home page Acc number
         public static String AccNumber;
         private void HOME_Load(object sender, EventArgs e)
-            
+
         {
             AccNumlbl.Text = "Account Number: " + Login.AccNumber;
             AccNumber = Login.AccNumber;
@@ -85,6 +88,16 @@ namespace BurakT_ATM
         }
 
         private void AccNumBl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
